@@ -5,8 +5,8 @@
 }
 
 :root {
-    --morkbla:  #0F456C;  
-    --ljusbla:  #F0F8FA; 
+    --darkblue:  #0F456C;  
+    --lightblue:  #F0F8FA; 
     --beige:    #F5E7BA; 
     --offwhite: #FDFAF1;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    background: var(--morkbla);
+    background: var(--darkblue);
 }
 
 .header-content {
