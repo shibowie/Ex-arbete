@@ -1,0 +1,12 @@
+@use 'variables'
+
+body {
+    margin: 0;
+    background-color: blue;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

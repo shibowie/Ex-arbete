@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gästbok.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Gästboken</h2>
+    <div class="grid">
+   <div class="gästkort">
+    <input type="checkbox" id="gäst1" hidden>  
+    <label for="gäst1" class="gästlabel" tabindex="0">
+        <img src="gäst1.png" alt="..." class="gästbild">
+        Gäst 1
+    </label>
+    
+    <div class="popup" role="dialog" aria-labelledby="gäst1-namn" aria-modal="true">
+        <div class="popup-content">
+            <div class="popup-text">
+                <h3 id="gäst1-namn">Vilma Berg</h3>
+                
+                <label for="gäst1" class="close" aria-label="Stäng popup">&times;</label> 
+                
+                <p class="review-text">"Väldigt trevlig hotell med vänlig personal och otrolig utsikt!"</p>
+                <p class="stars">⭐️⭐️⭐️⭐️⭐️<br>(5 av 5 stjärnor)</p>
+            </div>
+            
+            <img src="gäst1.png" alt="Vilma Berg" class="popup-img">
+        </div>
+    </div>
+</div>
+        </article>
+          <article class="gästkort">
+            <input type="checkbox" id="gäst2" hidden>
+        <label for="gäst1" class="gästlabel" tabindex="0"><img src="gäst2.png" alt="Ett skrattande par som åker båt" class="gästbild">
+        Gäst 2
+        </label>
+        </article>
+        </article>
+          <article class="gästkort">
+            <input type="checkbox" id="gäst3" hidden>
+        <label for="gäst2" class="gästlabel" tabindex="0"><img src="gäst3.png" alt="Ett skrattande par som åker båt" class="gästbild">
+        Gäst 3
+        </label>
+        </article>
+        </article>
+          <article class="gästkort">
+            <input type="checkbox" id="gäst4" hidden>
+        <label for="gäst4" class="gästlabel" tabindex="0"><img src="gäst4.png" alt="Ett skrattande par som åker båt" class="gästbild">
+        Gäst 4
+        </label>
+        </article>
+    </div>
+    </div>
+</body>
+</html>

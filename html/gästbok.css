@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    background-color:#FDFAF1;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+h2 {
+    color: #0F456C;
+    font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  text-align: center;
+  padding: 30px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  gap: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.gästkort {
+    height: 140px;
+    width: 140px;
+    border-radius: 18px;
+    background-color: #E1F1F4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gästlabel {
+    display: block; 
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #0F456C;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.gästbild {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin: 10px; 
+}
+
+.gästkort .popup {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999; 
+    transition: opacity 0.3s, visibility 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#gäst1:checked ~ .popup {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    width: 300px; 
+    height: 170px;
+    background-color: #E1F1F4;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    grid-template-rows: auto 1fr; 
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    align-items: space-around;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+#gäst1:checked ~ .popup .popup-content {
+    transform: scale(1); 
+}
+
+.popup-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+    border-bottom: none;
+    overflow-y: auto;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.popup-text h3 {
+    margin: 0 0 5px 0;
+    color: #0F456C;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.popup-text p {
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 1.2;
+}
+
+
+
+.popup-img {
+    width: 110px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    align-self: center; 
+
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #0F456C;
+    line-height: 1;
+}
+
+.gästkort > .popup > .close {
+    display: none;
+}
