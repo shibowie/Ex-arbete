@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    width: 412px;
+    height: 115px;
+    background-color: #0F456C;;
+}
+
+.logo {
+    height: 115px;
+}
+
+h1 {
+    align-self: center;
+    color: #F4E6BB;
+}
+
+nav {
+    width: 412px;
+    height: 80px;
+    background-color: #F0F8FA;
+}
+
+main {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 14px;
+}
+
+p {
+    text-align: center;
+    max-width: 327px;
+}
+
+.middle-row {
+    padding: none;
+    width: 372px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#our-rooms, #frukost {
+    width: 369px;
+    border-radius: 28px;
+    border: 2.5px solid #0F456C;
+}
+
+#galleri, #guest-book {
+    width: 176px;
+    border-radius: 28px;
+    border: 2.5px solid #0F456C;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 412px;
+    height: 200px;
+    background-color: #0F456C;
+    color: #F4E6BB;
+}
+
+.left-column {
+    width: 100px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.middle-column {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-column {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 8px;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+}
