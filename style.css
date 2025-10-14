@@ -43,5 +43,12 @@ header {
 }
 
 .menu-btn {
+    position: relative;
     margin-left: auto;
+    font-size: 32px;
+    color: var(--beige);
+    background: transparent;
+    border: 0;
+    padding: 16px;
+    cursor: pointer;
 }
