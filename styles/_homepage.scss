@@ -29,9 +29,42 @@ h1 {
 }
 
 .room-check {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100vw;
     height: 80px;
     background-color: #F0F8FA;
+}
+
+.check-date {
+    font-family: "Jura", sans-serif;
+    background-color: $primarySand;
+    color: $primaryNavy;
+    text-align: center;
+    margin-top: 8px;
+    height: 18px;
+    width: 140px;
+    border-radius: 12px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#check-btn {
+    font-family: "Jura", sans-serif;
+    border-radius: 12px;
+    font-size: 16px;
+    height: 50px;
+    width: 120px;
+    background-color: $primaryNavy;
+    border: 2px solid $primaryNavy;
+    color: $primarySand;
+    &:hover {
+        cursor: pointer;
+        background-color: darken($primaryNavy, 5%);
+        box-shadow: 1px 1px 4px gray;
+    }
 }
 
 main {

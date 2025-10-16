@@ -11,15 +11,19 @@
 </head>
 <body>
     <header><img src="./images/logga.png" class="logo"><h1>Havsviken</h1></header>
-    <div class="room-check">incheckning utcheckning<br>
-        <input type="date" name="incheckning">
-        <input type="date" name="utcheckning">
-        <button type="submit">Kolla lediga rum</button>
+    <div class="room-check">
+        <div class="check">incheckning<br>
+            <input type="date" name="incheckning" class="check-date">
+        </div>
+        <div class="check">utcheckning<br>
+            <input type="date" name="utcheckning" class="check-date">
+        </div>
+        <button type="submit" id="check-btn">Kolla<br>lediga rum</button>
     </div>
     <main>
         <h2 id="welcome">Välkommna till Havsviken</h2>
-        <p>Ett havsnära Bed & Breakfast där lugn, komfort och enkelhet står i centrum.
-Vi erbjuder ett personligt boende med närhet till naturen och havets rytm.</p>
+        <p>Ett havsnära Bed & Breakfast där lugn, komfort och enkelhet står i centrum. 
+            Vi erbjuder ett personligt boende med närhet till naturen och havets rytm.</p>
 
         <div class="image-container">
             <label for="rooms">

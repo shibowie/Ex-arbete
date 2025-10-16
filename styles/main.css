@@ -31,9 +31,42 @@ h1 {
 }
 
 .room-check {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100vw;
   height: 80px;
   background-color: #F0F8FA;
+}
+
+.check-date {
+  font-family: "Jura", sans-serif;
+  background-color: #F4E6BB;
+  color: #0F456C;
+  text-align: center;
+  margin-top: 8px;
+  height: 18px;
+  width: 140px;
+  border-radius: 12px;
+}
+.check-date:hover {
+  cursor: pointer;
+}
+
+#check-btn {
+  font-family: "Jura", sans-serif;
+  border-radius: 12px;
+  font-size: 16px;
+  height: 50px;
+  width: 120px;
+  background-color: #0F456C;
+  border: 2px solid #0F456C;
+  color: #F4E6BB;
+}
+#check-btn:hover {
+  cursor: pointer;
+  background-color: rgb(11.8902439024, 54.6951219512, 85.6097560976);
+  box-shadow: 1px 1px 4px gray;
 }
 
 main {
@@ -176,6 +209,19 @@ ul li {
   text-align: justify;
   line-height: 28px;
   margin: 20px auto;
+}
+
+.whole-family-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 18px;
+  margin-bottom: 40px;
+}
+
+.receptionen, .kitchen,
+.janitors, .the-owners {
+  display: flex;
 }
 
 .family {
