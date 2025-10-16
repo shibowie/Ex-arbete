@@ -21,3 +21,8 @@
     @include family-image;
     @include imageBorder;
 }
+
+#the-owners {
+    @include imageBorder;
+    width: 517px;    
+}
