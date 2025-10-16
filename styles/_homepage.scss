@@ -4,35 +4,38 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: "Jura", sans-serif;
+    color: $primaryNavy;
 }
 
 header {
     display: flex;
-    width: 412px;
+    width: 100vw;
     height: 115px;
-    background-color: #0F456C;;
+    background-color: $primaryNavy;
 }
 
 .logo {
+    margin-left: 10px;
     height: 115px;
 }
 
 h1 {
+    margin-left: 20px;
     font-family: "Mea Culpa", cursive;
     font-size: 42px;
     font-weight: 100;
     align-self: center;
-    color: #F4E6BB;
+    color: $primarySand;
 }
 
-nav {
-    width: 412px;
+.room-check {
+    width: 100vw;
     height: 80px;
     background-color: #F0F8FA;
 }
 
 main {
-    width: 375px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,36 +43,59 @@ main {
 }
 
 p {
+    margin-top: -20px;
     text-align: center;
-    max-width: 327px;
+    max-width: 350px;
+    line-height: 24px;
 }
 
-.middle-row {
+.image-container {
+    position: relative;
+}
+
+.centerd-text {
+    font-size: 32px;
+    font-weight: 700;
+    @include centerd-text;
+}
+
+.small {
+    font-size: 22px;
+}
+
+.two-images {
     padding: none;
     width: 372px;
     display: flex;
     justify-content: space-between;
 }
 
-#our-rooms, #frukost {
+#rooms, #frukost {
+    opacity: 0.8;
     width: 369px;
-    border-radius: 28px;
-    border: 2.5px solid #0F456C;
+    @include imageBorder;
+    &:hover {
+        @include imageHover;
+    }
 }
 
-#galleri, #guest-book {
+#galleri, #guest-book, #om-oss, #kontakt {
+    opacity: 0.8;
     width: 176px;
-    border-radius: 28px;
-    border: 2.5px solid #0F456C;
+    @include imageBorder;
+    &:hover {
+        @include imageHover;
+    }
 }
 
 footer {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 412px;
+    width: 100vw;
     height: 200px;
-    background-color: #0F456C;
+    background-color: $primaryNavy;
     color: #F4E6BB;
 }
 
@@ -83,7 +109,7 @@ ul {
 }
 
 .middle-column {
-    width: 130px;
+    width: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,4 +127,8 @@ ul {
 .icon {
     height: 50px;
     width: 50px;
+    &:hover {
+        cursor: pointer;
+        scale: 1.2;
+    }
 }

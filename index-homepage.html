@@ -7,25 +7,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Mea+Culpa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <header><img src="/images/logga.png" class="logo"><h1>Havsviken</h1></header>
-    <nav>incheckning utcheckning<br>
+    <div class="room-check">incheckning utcheckning<br>
         <input type="date" name="incheckning">
         <input type="date" name="utcheckning">
         <button type="submit">Kolla lediga rum</button>
-    </nav>
+    </div>
     <main>
-        <h2>Välkommna till Havsviken</h2>
+        <h2 id="welcome">Välkommna till Havsviken</h2>
         <p>Ett havsnära Bed & Breakfast där lugn, komfort och enkelhet står i centrum.
 Vi erbjuder ett personligt boende med närhet till naturen och havets rytm.</p>
-        <img src="/images/room-01.png" id="our-rooms">
-        <div class="middle-row">
-            <img src="/images/galleri.png" id="galleri">
-            <img src="/images/gästboken.png" id="guest-book">
+
+        <div class="image-container">
+            <label for="rooms">
+            <img src="/images/our-rooms.png" id="rooms">
+            <div class="centerd-text">VÅRA RUM</div></img>
+            </label>
         </div>
-        <img src="/images/frulle.png" id="frukost">
+
+        <div class="two-images">
+            <div class="image-container">
+                <img src="/images/galleri.png" id="galleri">
+                <div class="centerd-text small">GALLERI</div>
+            </div>
+            <div class="image-container">
+                <img src="/images/guest-book.png" id="guest-book">
+                <div class="centerd-text small">GÄSTBOKEN</div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="/images/frulle.png" id="frukost">
+            <div class="centerd-text">FRUKOST</div>
+        </div>
+
+        <div class="two-images image-container">
+            <div class="image-container">
+                <img src="/images/about-us.png" id="om-oss">
+                <div class="centerd-text small">OM OSS</div>
+            </div>
+            <div class="image-container">
+                <img src="/images/kontakt.png" id="kontakt">
+                <div class="centerd-text small">KONTAKT</div>
+            </div>
+        </div>
+
     </main>
     <footer>
         <div class="left-column">

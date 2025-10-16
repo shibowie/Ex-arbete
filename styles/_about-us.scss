@@ -1,0 +1,23 @@
+#about {
+    background-color: $primarySand;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: $primaryNavy;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.historia p {
+    max-width: 400px;
+    text-align: justify;
+    line-height: 28px;
+    margin: 20px auto;
+}
+
+.family {
+    @include family-image;
+    @include imageBorder;
+}
