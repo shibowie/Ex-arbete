@@ -7,8 +7,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,8 +17,13 @@
                 <img src="havsvikenbb/logga.png" class="logo" alt="Havsviken Bed & Breakfast">
             </a>
             <span class="logo-text">Havsviken</span>
-            <button class="menu-btn" type="button" aria-label="öppna meny" aria-controls="huvudmeny" aria-expanded="false">☰</button>
-            <nav id="huvudmeny" class="menu" hidden>
+                <input id="menu-toggle" class="menu-toggle" type="checkbox" aria-label="Öppna huvudmeny">
+                <label for="menu-toggle" class="menu-btn" aria-hidden="true">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+            <nav id="huvudmeny" class="menu" aria-label="Huvudmeny">
                 <ul>                                                                
                     <li><a href="index.html">Startsida</a></li>                       
                     <li><a href="vara-rum.html">Våra rum</a></li>                   
@@ -27,7 +32,46 @@
                     <li><a href="om-oss.html">Om oss</a></li>                         
                 </ul>
             </nav>
+            <label for="menu-toggle" class="backdrop" aria-hidden="true"></label>
         </div>
     </header>
+<main>
+    <section class="booking-wrap" aria-label="bokning">
+        <form class="booking-form">
+            <div class="field">
+                <label for="checkin">Incheckning</label>
+                <input id="checkin" type="text" placeholder="-- / -- / --">
+            </div>
+            <div class="field">
+                <label for="checkout">Utcheckning</label>
+                <input id="checkout" type="text" placeholder="-- / -- / --">
+            </div>
+            <button class="lediga-rum-btn" type="button">Kolla lediga rum</button>
+        </form>
+</section>
+    </main>
+        <footer>
+            <div class="footer-wrapper">
+                <nav aria-label="länkar i sidfoten">
+                    <ul class="footer-links">
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="vara-rum.html" aria-current="page">Våra rum</a></li>
+                        <li><a href="gastboken.html">Gästboken</a></li>
+                        <li><a href="om-oss.html">Om oss</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            <div class="footer-brand">
+                <span class="logo-text">Havsviken</span>
+                <img src="havsvikenbb/logga.png" alt="" class="footer-logo">
+            </div>
+                <ul class="social-list" aria-label="sociala medier">
+                    <li><a href="https://facebook.com/havsvikenbb" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="havsvikenbb/icons/facebook.svg" alt="" width="28" height="28"></a></li>
+                    <li><a href="https://linkedin.com/company/havsvikenbb" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="havsvikenbb/icons/linkedin.svg" alt="" width="28" height="28"></a></li>
+                    <li><a href="https://instagram.com/havsvikenbb" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="havsvikenbb/icons/instagram.svg" alt="" width="28" height="28"></a></li>
+                </ul>
+            <p class="copyright">© Havsviken B&amp;B 2025</p>
+            </div>
+        </footer>
 </body>
 </html>
