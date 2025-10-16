@@ -113,6 +113,14 @@ footer {
   background-color: #0F456C;
   color: #F4E6BB;
 }
+footer a {
+  text-decoration: none;
+  color: #F4E6BB;
+}
+footer a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 .left-column {
   width: 100px;
@@ -121,6 +129,9 @@ footer {
 ul {
   list-style-type: none;
   padding: 0;
+}
+ul li {
+  margin: 5px;
 }
 
 .middle-column {
@@ -140,8 +151,8 @@ ul {
 }
 
 .icon {
-  height: 50px;
-  width: 50px;
+  height: 46px;
+  width: 46px;
 }
 .icon:hover {
   cursor: pointer;

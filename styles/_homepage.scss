@@ -97,6 +97,14 @@ footer {
     height: 200px;
     background-color: $primaryNavy;
     color: #F4E6BB;
+    a {
+        text-decoration: none;
+        color: #F4E6BB;
+        &:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
 }
 
 .left-column {
@@ -106,6 +114,9 @@ footer {
 ul {
     list-style-type: none;
     padding: 0;
+    li {
+        margin: 5px;
+    }
 }
 
 .middle-column {
@@ -125,8 +136,8 @@ ul {
 }
 
 .icon {
-    height: 50px;
-    width: 50px;
+    height: 46px;
+    width: 46px;
     &:hover {
         cursor: pointer;
         scale: 1.2;
