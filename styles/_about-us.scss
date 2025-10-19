@@ -1,3 +1,7 @@
+main {
+    display: flex;
+}
+
 #about {
     background-color: $primarySand;
     padding: 12px 24px;
@@ -18,16 +22,47 @@
 }
 
 .whole-family-container {
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 18px;
     margin-bottom: 40px;
+    & p {
+        max-width: 280px;
+        text-align: start;
+        margin-top: 2px;
+    }
+    & h4 {
+        font-size: 18px;;
+        text-align: center;
+    }
 }
 
-.receptionen, .kitchen, 
-.janitors, .the-owners {
+.mail {
+    text-align: start;
+    margin-bottom: -15px;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.employee-gruop {
     display: flex;
+    align-content: center;
+    gap: 50px;
+}
+
+.employee {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h5 {
+        margin: 2px;
+        font-size: 16px;
+    }
 }
 
 .family {

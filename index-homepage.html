@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sve">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,47 +21,51 @@
         <button type="submit" id="check-btn">Kolla<br>lediga rum</button>
     </div>
     <main>
-        <h2 id="welcome">Välkommna till Havsviken</h2>
+        <h2 id="welcome">Välkomna till Havsviken</h2>
         <p>Ett havsnära Bed & Breakfast där lugn, komfort och enkelhet står i centrum. 
             Vi erbjuder ett personligt boende med närhet till naturen och havets rytm.</p>
 
-        <div class="image-container">
-            <label for="rooms">
-            <img src="./images/our-rooms.png" id="rooms">
-            <div class="centerd-text">VÅRA RUM</div></img>
-            </label>
-        </div>
+        <div class="contains-all-links">
+            <div class="for-breakpoint">
+                <div class="image-container">
+                    <img src="./images/our-rooms.png" id="rooms">
+                    <div class="centered-text">VÅRA RUM</div>
+                    </label>
+                </div>
 
-        <div class="two-images">
-            <div class="image-container">
-                <img src="./images/galleri.png" id="galleri">
-                <div class="centerd-text small">GALLERI</div>
+                <div class="two-images">
+                    <div class="image-container">
+                        <img src="./images/galleri.png" id="galleri">
+                        <div class="centered-text small">GALLERI</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/guest-book.png" id="guest-book">
+                        <div class="centered-text small">GÄSTBOKEN</div>
+                    </div>
+                </div>
             </div>
-            <div class="image-container">
-                <img src="./images/guest-book.png" id="guest-book">
-                <div class="centerd-text small">GÄSTBOKEN</div>
+
+            <div class="for-breakpoint">
+                <div class="image-container">
+                    <img src="./images/frulle.png" id="frukost">
+                    <div class="centered-text">FRUKOST</div>
+                </div>
+
+                <div class="two-images image-container">
+                    <div class="image-container">
+                        <a href="./index-about-us.html"><img src="./images/about-us.png" id="om-oss">
+                        <div class="centered-text small">OM OSS</div></a>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/kontakt.png" id="kontakt">
+                        <div class="centered-text small">KONTAKT</div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="image-container">
-            <img src="./images/frulle.png" id="frukost">
-            <div class="centerd-text">FRUKOST</div>
-        </div>
-
-        <div class="two-images image-container">
-            <div class="image-container">
-                <a href="./index-about-us.html"><img src="./images/about-us.png" id="om-oss">
-                <div class="centerd-text small">OM OSS</div></a>
-            </div>
-            <div class="image-container">
-                <img src="./images/kontakt.png" id="kontakt">
-                <div class="centerd-text small">KONTAKT</div>
-            </div>
-        </div>
-
     </main>
     <footer>
-        <div class="left-column">
+        <nav class="left-column">
             <ul>Länkar
                 <li><a href="./index-homepage.html">Hem</a></li>
                 <li><a href="">Våra rum</a></li>
@@ -69,7 +73,7 @@
                 <li><a href="./index-about-us.html">Om oss</a></li>
                 <li><a href="">Kontakt</a></li>
             </ul>
-        </div>
+        </nav>
         <div class="middle-column">
             Havsviken<br>
             <img src="./images/logga.png" class="logo"><br>

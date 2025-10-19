@@ -1,8 +1,5 @@
 body {
     background-color: #FDFAF1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: "Jura", sans-serif;
     color: $primaryNavy;
 }
@@ -68,6 +65,7 @@ h1 {
 }
 
 main {
+    display: flex;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -82,14 +80,23 @@ p {
     line-height: 24px;
 }
 
+.contains-all-links {
+    display: flex;
+    flex-direction: column;
+
+    // @media (min-width: $breakpoint-medium) {
+    //     flex-direction: row;
+    // }
+}
+
 .image-container {
     position: relative;
 }
 
-.centerd-text {
+.centered-text {
     font-size: 32px;
     font-weight: 700;
-    @include centerd-text;
+    @include centered-text;
 }
 
 .small {
@@ -101,6 +108,13 @@ p {
     width: 372px;
     display: flex;
     justify-content: space-between;
+}
+
+.for-breakpoint {
+    @media (min-width: $breakpoint-medium) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 #rooms, #frukost {
@@ -118,6 +132,12 @@ p {
     @include imageBorder;
     &:hover {
         @include imageHover;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        width: 168px;
+        height: 246px;
+        object-fit: cover;
     }
 }
 

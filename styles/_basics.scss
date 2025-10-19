@@ -1,10 +1,10 @@
-/* VARIABLER */
+// VARIABLER
 
 $primaryNavy: #0F456C;
 $primarySand: #F4E6BB;
 
 
-/* MIXINS */
+// MIXINS
 
 @mixin imageHover {
         opacity: 1;
@@ -22,7 +22,7 @@ $primarySand: #F4E6BB;
     height: 240px;
 }
 
-@mixin centerd-text {
+@mixin centered-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,3 +30,7 @@ $primarySand: #F4E6BB;
     text-align: center;
     color: $primarySand;
 }
+
+// MEDIA QUERIES
+
+$breakpoint-medium: 768px;
