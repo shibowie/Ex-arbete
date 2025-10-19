@@ -4,8 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="gästbok.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
 <body>
+    <header>
+        <div class="logga">
+          <a href="index.html"><img src="logga.png" alt="" class="logga"></a>
+        </div>
+        <div class="havsviken">
+          <h1>Havsviken</h1>
+        </div>  
+        <div class="navigation">
+            <input type="checkbox" id="menyknapp" class="menyknapp" aria-controls="main-menu">
+        <label for="menyknapp" class="burgare" aria-label="navigation">
+            <span class="icon"></span>
+        </label>
+            <nav id="main-menu">
+            <ul class="meny">
+               <li><a href="index.html">Startsida</a></li>                       
+               <li><a href="vara-rum.html">Våra rum</a></li>                   
+               <li><a href="gastboken.html">Gästboken</a></li>                 
+               <li><a href="kontakt.html">Kontakt</a></li>                     
+               <li><a href="om-oss.html">Om oss</a></li>
+            </ul>   
+            </nav>  
+        </div>   
+    </header>
+    <h2>Gästboken</h2>
+    <div class="grid">
+   <div class="gästkort">
+    <input type="checkbox" id="gäst1" hidden>  
+    <label for="gäst1" class="gästlabel" tabindex="0">
+        <img src="gäst1.png" alt="..." class="gästbild">
+        Gäst 1
+    </label>
     
+    <div class="popup" role="dialog" aria-labelledby="gäst1-namn" aria-modal="true">
+        <div class="popup-content">
+            <div class="popup-text">
+                <h3 id="gäst1-namn">Vilma Berg</h3>
+                
+                <label for="gäst1" class="close" aria-label="Stäng popup">&times;</label> 
+                
+                <p class="review-text">"Väldigt trevlig hotell med vänlig personal och otrolig utsikt!"</p>
+                <p class="stars">⭐️⭐️⭐️⭐️⭐️<br>(5 av 5 stjärnor)</p>
+            </div>
+            
+            <img src="gäst1.png" alt="Vilma Berg" class="popup-img">
+        </div>
+    </div>
+</div>
+        </article>
+          <article class="gästkort">
+            <input type="checkbox" id="gäst2" hidden>
+        <label for="gäst2" class="gästlabel" tabindex="0"><img src="gäst2.png" alt="Ett skrattande par som åker båt" class="gästbild">
+        Gäst 2
+        </label>
+         <div class="popup" role="dialog" aria-labelledby="gäst2-namn" aria-modal="true">
+        <div class="popup-content">
+            <div class="popup-text">
+                <h3 id="gäst2-namn">Familjen Svensson</h3>
+                
+                <label for="gäst2" class="close" aria-label="Stäng popup">&times;</label> 
+                
+                <p class="review-text">"Vi hade det super trevligt på vår familjesemester, trevligt att det är barnvänligt!"</p>
+                <p class="stars">⭐️⭐️⭐️⭐️⭐️<br>(5 av 5 stjärnor)</p>
+            </div>
+            
+            <img src="gäst2.png" alt="Semesterbild vid havet av en familj" class="popup-img">
+        </div>
+    </div>
+        </article>
+        </article>
+          <article class="gästkort">
+            <input type="checkbox" id="gäst3" hidden>
+        <label for="gäst3" class="gästlabel" tabindex="0"><img src="gäst3.png" alt="Ett skrattande par som åker båt" class="gästbild">
+        Gäst 3
+        </label>
+         <div class="popup" role="dialog" aria-labelledby="gäst3-namn" aria-modal="true">
+        <div class="popup-content">
+            <div class="popup-text">
+                <h3 id="gäst3-namn">Familjen Svensson</h3>
+                
+                <label for="gäst3" class="close" aria-label="Stäng popup">&times;</label> 
+                
+                <p class="review-text">"Vi hade det super trevligt på vår familjesemester, trevligt att det är barnvänligt!"</p>
+                <p class="stars">⭐️⭐️⭐️⭐️⭐️<br>(5 av 5 stjärnor)</p>
+            </div>
+            
+            <img src="gäst3.png" alt="Semesterbild vid havet av en familj" class="popup-img">
+        </div>
+        </article>
+        </article>
+          <article class="gästkort">
+            <input type="checkbox" id="gäst4" hidden>
+        <label for="gäst4" class="gästlabel" tabindex="0"><img src="gäst4.png" alt="Ett skrattande par som åker båt" class="gästbild">
+        Gäst 4
+        </label>
+         <div class="popup" role="dialog" aria-labelledby="gäst4-namn" aria-modal="true">
+        <div class="popup-content">
+            <div class="popup-text">
+                <h3 id="gäst4-namn">Familjen Svensson</h3>
+                
+                <label for="gäst4" class="close" aria-label="Stäng popup">&times;</label> 
+                
+                <p class="review-text">"Vi hade det super trevligt på vår familjesemester, trevligt att det är barnvänligt!"</p>
+                <p class="stars">⭐️⭐️⭐️⭐️⭐️<br>(5 av 5 stjärnor)</p>
+            </div>
+            
+            <img src="gäst4.png" alt="Semesterbild vid havet av en familj" class="popup-img">
+        </div>
+        </article>
+    </div>
+    </div>
+    <section class="formulär">
+      <h3>Lägg till i gästboken!</h3>
+      <form id="nytt" action="#" method="post" enctype="multipart/form-data" aria-live="polite">
+        <div>
+            <label for="gästnamn">Ditt namn</label><br>
+            <input type="text" id="gästnamn" name="gästnamn" required aria-required="true">
+        </div>
+        <div>
+            <label for="omdöme">Berätta om din upplevelse</label><br>
+            <textarea id="omdöme" name="omdöme" required aria-required="true"></textarea>
+        </div>
+        <div>
+            <label for="foto">Lägg till din bild</label>
+            <input type="file" name="foto" id="foto" accept="image/*" aria-describedby="foto">
+        </div>
+        <p>Lämna ett betyg</p>
+        <div id="rating" role="radiogroup" aria-labelledby="rating-label">
+            <input type="radio" id="star1" name="rating" value="1" aria-label="1 av 5 stjärna" hidden>
+                <label for="star1" class="stjärna" title="1 stjärna">★</label>
+                <input type="radio" id="star2" name="rating" value="2" aria-label="2 av 5 stjärnor" hidden>
+                <label for="star2" class="stjärna" title="2 stjärnor">★</label>
+                <input type="radio" id="star3" name="rating" value="3" aria-label="3 av 5 stjärnor" hidden>
+                <label for="star3" class="stjärna" title="3 stjärnor">★</label>
+                <input type="radio" id="star4" name="rating" value="4" aria-label="4 av 5 stjärnor" hidden>
+                <label for="star4" class="stjärna" title="4 stjärnor">★</label>
+                <input type="radio" id="star5" name="rating" value="5" required aria-label="5 av 5 stjärnor" hidden>
+                <label for="star5" class="stjärna" title="5 stjärnor">★</label>
+        </div>
+         <button type="submit" id="skicka">Skicka in omdöme</button>
+            <div id="form-status" role="status" aria-live="polite"></div>
+        </form>
+    </section>
+    <footer>
+        <div class="left-column">
+            <p>Länkar</p>
+            <ul>
+                <li>Hem</li>
+                <li>Våra rum</li>
+                <li>Gästboken</li>
+                <li>Om oss</li>
+                <li>Kontakt</li>
+            </ul>
+        </div>
+        <div class="middle-column">
+            <p>Havsviken</p><br>
+            <img src="logga.png" class="logo"><br>
+            <p></p>© Havsviken 2025</p>
+        </div>
+        <div class="right-column">
+     <p>Följ oss</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" aria-label="Instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com" aria-label="Facebook" target="_blank">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="mailto:info@example.com" aria-label="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+        </div>
+    </footer>
 </body>
 </html>
