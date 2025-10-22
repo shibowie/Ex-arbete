@@ -6,11 +6,26 @@
     <title>Havsviken</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Mea+Culpa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
+    <style>
+        html {
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <header><img src="./images/logga.png" class="logo"><h1>Havsviken</h1></header>
+    <header>
+        <img src="./images/logga.png" class="logo">
+        <h1 class="havsviken">Havsviken</h1>
+        <nav class="navigering"><ul>
+            <li><a href="./index-homepage.html">Hem</a></li>
+            <li><a href="">Våra rum</a></li>
+            <li><a href="">Gästboken</a></li>
+            <li><a href="./index-about-us.html">Om oss</a></li>
+            <li><a href="">Kontakt</a></li>
+        </ul></nav>
+    </header>
     <div class="room-check">
         <div class="check">incheckning<br>
             <input type="date" name="incheckning" class="check-date">
@@ -29,36 +44,36 @@
             <div class="for-breakpoint">
                 <div class="image-container">
                     <img src="./images/our-rooms.png" id="rooms">
-                    <div class="centered-text">VÅRA RUM</div>
+                    <div class="centered-text">Våra rum</div>
                     </label>
                 </div>
 
                 <div class="two-images">
                     <div class="image-container">
                         <img src="./images/galleri.png" id="galleri">
-                        <div class="centered-text small">GALLERI</div>
+                        <div class="centered-text small-text">Galleri</div>
                     </div>
                     <div class="image-container">
                         <img src="./images/guest-book.png" id="guest-book">
-                        <div class="centered-text small">GÄSTBOKEN</div>
+                        <div class="centered-text small-text">Gästboken</div>
                     </div>
                 </div>
             </div>
 
-            <div class="for-breakpoint">
+            <div class="for-breakpoint row-reverse">
                 <div class="image-container">
                     <img src="./images/frulle.png" id="frukost">
-                    <div class="centered-text">FRUKOST</div>
+                    <div class="centered-text">Frukost</div>
                 </div>
 
                 <div class="two-images image-container">
                     <div class="image-container">
                         <a href="./index-about-us.html"><img src="./images/about-us.png" id="om-oss">
-                        <div class="centered-text small">OM OSS</div></a>
+                        <div class="centered-text small-text">Om oss</div></a>
                     </div>
                     <div class="image-container">
                         <img src="./images/kontakt.png" id="kontakt">
-                        <div class="centered-text small">KONTAKT</div>
+                        <div class="centered-text small-text">Kontakt</div>
                     </div>
                 </div>
             </div>
@@ -66,7 +81,7 @@
     </main>
     <footer>
         <nav class="left-column">
-            <ul>Länkar
+            <ul><h3>Länkar</h3>
                 <li><a href="./index-homepage.html">Hem</a></li>
                 <li><a href="">Våra rum</a></li>
                 <li><a href="">Gästboken</a></li>
@@ -75,7 +90,7 @@
             </ul>
         </nav>
         <div class="middle-column">
-            Havsviken<br>
+            <h4 class="havsviken">Havsviken</h4><br>
             <img src="./images/logga.png" class="logo"><br>
             © Havsviken 2025
         </div>

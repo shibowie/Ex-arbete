@@ -1,4 +1,12 @@
+html {
+  font-size: 18px;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
   background-color: #FDFAF1;
   font-family: "Jura", sans-serif;
   color: #0F456C;
@@ -6,23 +14,43 @@ body {
 
 header {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 115px;
   background-color: #0F456C;
 }
 
 .logo {
-  margin-left: 10px;
+  margin-left: 20px;
   height: 115px;
 }
 
 h1 {
-  margin-left: 20px;
-  font-family: "Mea Culpa", cursive;
   font-size: 42px;
   font-weight: 100;
   align-self: center;
   color: #F4E6BB;
+}
+
+.havsviken {
+  font-family: "Allura", cursive;
+}
+
+.navigering {
+  margin-left: 10vw;
+}
+.navigering ul {
+  display: flex;
+  gap: 1.4vw;
+}
+.navigering a {
+  color: #F4E6BB;
+  text-decoration: none;
+}
+.navigering a:hover {
+  text-decoration: underline;
+  color: #F0F8FA;
 }
 
 .room-check {
@@ -49,19 +77,22 @@ h1 {
 }
 
 #check-btn {
-  font-family: "Jura", sans-serif;
-  border-radius: 12px;
-  font-size: 16px;
-  height: 50px;
-  width: 120px;
   background-color: #0F456C;
-  border: 2px solid #0F456C;
   color: #F4E6BB;
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 #check-btn:hover {
   cursor: pointer;
-  background-color: rgb(11.8902439024, 54.6951219512, 85.6097560976);
-  box-shadow: 1px 1px 4px gray;
+  background-color: #F4E6BB;
+  color: #0F456C;
+  border: 2px solid #0F456C;
 }
 
 main {
@@ -76,8 +107,15 @@ main {
 p {
   margin-top: -20px;
   text-align: center;
-  max-width: 350px;
+  width: 80vw;
   line-height: 24px;
+}
+@media (min-width: 768px) {
+  p {
+    max-width: 775px;
+    font-size: 1.2rem;
+    line-height: 4vh;
+  }
 }
 
 .contains-all-links {
@@ -86,6 +124,8 @@ p {
 }
 
 .image-container {
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
@@ -100,48 +140,73 @@ p {
   color: #F4E6BB;
 }
 
-.small {
-  font-size: 22px;
+.small-text {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .small-text {
+    width: auto;
+    font-size: 28px;
+  }
 }
 
 .two-images {
-  padding: none;
-  width: 372px;
+  margin: 16px 0;
+  display: flex;
+  width: 94vw;
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 768px) {
+  .two-images {
+    margin: 10px 0;
+    width: 372px;
+  }
+}
 
+.for-breakpoint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media (min-width: 768px) {
   .for-breakpoint {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 775px;
+  }
+}
+
+@media (min-width: 768px) {
+  .row-reverse {
+    flex-direction: row-reverse;
   }
 }
 
 #rooms, #frukost {
-  opacity: 0.8;
-  width: 369px;
+  width: 94vw;
   border: 2.5px solid #0F456C;
   border-radius: 28px;
 }
-#rooms:hover, #frukost:hover {
-  opacity: 1;
-  cursor: pointer;
-  box-shadow: 2px 2px 6px gray;
-  scale: 1.02;
+@media (min-width: 768px) {
+  #rooms, #frukost {
+    width: 369px;
+    margin: 10px 0;
+    opacity: 0.8;
+  }
+  #rooms:hover, #frukost:hover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px gray;
+    scale: 1.02;
+  }
 }
 
 #galleri, #guest-book, #om-oss, #kontakt {
-  opacity: 0.8;
-  width: 176px;
+  width: 44vw;
   border: 2.5px solid #0F456C;
   border-radius: 28px;
-}
-#galleri:hover, #guest-book:hover, #om-oss:hover, #kontakt:hover {
-  opacity: 1;
-  cursor: pointer;
-  box-shadow: 2px 2px 6px gray;
-  scale: 1.02;
 }
 @media (min-width: 768px) {
   #galleri, #guest-book, #om-oss, #kontakt {
@@ -149,6 +214,13 @@ p {
     height: 246px;
     -o-object-fit: cover;
        object-fit: cover;
+    opacity: 0.8;
+  }
+  #galleri:hover, #guest-book:hover, #om-oss:hover, #kontakt:hover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px gray;
+    scale: 1.02;
   }
 }
 
@@ -175,6 +247,11 @@ footer a:hover {
   width: 100px;
 }
 
+h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -183,12 +260,22 @@ ul li {
   margin: 5px;
 }
 
+h4 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 0 0 -34px 0;
+}
+
 .middle-column {
-  width: 140px;
+  width: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.middle-column .logo {
+  margin-left: 0;
+  margin-bottom: -30px;
 }
 
 .right-column {
@@ -208,11 +295,147 @@ ul li {
   scale: 1.2;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkblue: #0F456C;
+  --lightblue: #F0F8FA;
+  --beige: #F5E7BA;
+  --offwhite: #FDFAF1;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Jura", sans-serif;
+  color: black;
+  background: var(--offwhite);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header {
+  background: var(--darkblue);
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.header-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.logo-link {
+  display: inline-flex;
+}
+
+.logo {
+  height: 64px;
+}
+
+.havsviken-mobile {
+  flex: 1 1 auto;
+  text-align: center;
+  margin-right: 8px;
+  font-family: "Allura", cursive;
+  font-size: 24px;
+  color: var(--beige);
+}
+
+.menu-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+}
+
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 2px;
+  width: 24px;
+  background: var(--beige);
+}
+
+.nav-meny {
+  display: none;
+  margin-top: 8px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.nav-meny .link {
+  display: block;
+  color: var(--beige);
+  text-decoration: none;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.nav-meny .link + .link {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#menu-toggle:checked ~ .nav-meny {
+  display: block;
+}
+
+.header-desktop {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  margin-right: 12px;
+}
+
+.header-desktop .havsviken-desktop {
+  font-family: "Allura", cursive;
+  font-size: 28px;
+  color: var(--beige);
+}
+
+.header-desktop .link {
+  color: var(--beige);
+  text-decoration: none;
+}
+
 main {
   display: flex;
 }
 
-#about {
+.havsviken {
+  font-family: "Allura", cursive;
+}
+
+#about, #title-family {
   background-color: #F4E6BB;
   padding: 12px 24px;
   border-radius: 24px;
@@ -230,28 +453,63 @@ main {
   line-height: 28px;
   margin: 20px auto;
 }
+@media (min-width: 768px) {
+  .historia p {
+    max-width: 775px;
+    font-size: 1.2rem;
+    line-height: 4vh;
+  }
+}
+
+#title-family {
+  margin: 50px 0 20px 0;
+}
 
 .whole-family-container {
-  width: 500px;
+  width: 96vw;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   row-gap: 18px;
   margin-bottom: 40px;
 }
+.whole-family-container h4 {
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 14px 0;
+}
+.whole-family-container h5 {
+  letter-spacing: -0.5px;
+  margin: -6px 0;
+  font-size: 16px;
+}
 .whole-family-container p {
+  font-size: 16px;
+  width: 36vw;
   max-width: 280px;
   text-align: start;
   margin-top: 2px;
 }
-.whole-family-container h4 {
-  font-size: 18px;
-  text-align: center;
+@media (min-width: 768px) {
+  .whole-family-container p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .whole-family-container {
+    width: 96vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
 .mail {
   text-align: start;
-  margin-bottom: -15px;
+  margin: -15px 0;
 }
 .mail:hover {
   text-decoration: underline;
@@ -261,7 +519,14 @@ main {
 .employee-gruop {
   display: flex;
   align-content: center;
-  gap: 50px;
+  gap: 2vw;
+}
+@media (min-width: 768px) {
+  .employee-gruop {
+    width: 96vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 .employee {
@@ -270,14 +535,10 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.employee h5 {
-  margin: 2px;
-  font-size: 16px;
-}
 
 .family {
-  width: 192px;
-  height: 240px;
+  width: 36vw;
+  max-width: 210px;
   border: 2.5px solid #0F456C;
   border-radius: 28px;
 }
@@ -285,5 +546,5 @@ main {
 #the-owners {
   border: 2.5px solid #0F456C;
   border-radius: 28px;
-  width: 517px;
+  width: 85vw;
 }/*# sourceMappingURL=main.css.map */

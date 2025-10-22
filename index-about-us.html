@@ -6,11 +6,49 @@
     <title>Havsviken</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Mea+Culpa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
+    <style>
+        html {
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <header><a href="./index-homepage.html"><img src="./images/logga.png" class="logo"></a><h1>Havsviken</h1></header>
+    <header class="header">
+    <!-- Meny i mobile -->
+    <div class="header-mobile">
+        <a href="./index-homepage.html" class="logo-link">
+            <img src="./images/logga.png" alt="Havsviken B&B" class="logo">
+        </a>
+        <span class="havsviken-mobile">Havsviken</span>
+        <label for="menu-toggle" class="menu-btn" aria-label="Öppna huvudmeny" aria-controls="mobilmeny">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </div>
+    <input id="menu-toggle" class="menu-toggle" type="checkbox">
+    <nav id="mobilmeny" class="nav-meny" aria-label="Huvudmeny mobil">
+        <a href="index.html" class="link">Hem</a>
+        <a href="vara-rum.html" class="link">Våra rum</a>
+        <a href="gastboken.html" class="link">Gästboken</a>
+        <a href="om-oss.html" class="link">Om oss</a>
+        <a href="kontakt.html" class="link">Kontakt</a>
+    </nav>
+    <!-- Meny i desktop -->
+    <div class="header-desktop">
+        <a href="index.html" class="logo-link">
+            <img src="havsvikenbb/logga.png" alt="Havsviken B&amp;B" class="logo">
+        </a>
+    <span class="havsviken-desktop">Havsviken</span>
+        <a href="index.html" class="link">Hem</a>
+        <a href="vara-rum.html" class="link" aria-current="page">Våra rum</a>
+        <a href="gastboken.html" class="link">Gästboken</a>
+        <a href="om-oss.html" class="link">Om oss</a>
+        <a href="kontakt.html" class="link">Kontakt</a>
+    </div>
+</header>
     <div class="room-check">
         <div class="check">incheckning<br>
             <input type="date" name="incheckning" class="check-date">
@@ -39,14 +77,14 @@
         <div class="motto">❝ Små vågor,<br>
             stora minnen ❞
         </div>
-        <h3>Familjen på Havsviken</h3>
+        <h3 id="title-family">Familjen på Havsviken</h3>
         <div class="whole-family-container">
             <div class="employee-gruop">
                 <div class="employee">
                     <h4>River Amari-Solberg</h4>
                     <img src="./images/Familjen/River.png" class="family"><br>
                     <h5>Receptionist</h5><br>
-                    <p class="mail">river.amari-solberg@havsviken.se</p><br>
+                    <p class="mail">✉ river.amari-solberg@havsviken.se</p><br>
                     <p>River är en nyfiken själ som älskar att höra gästernas
                     livshistorier och alltid hittar något att skratta åt.</p>
                 </div>
@@ -54,7 +92,7 @@
                     <h4>Noah Lindqvist</h4>
                     <img src="./images/Familjen/Noah.png" class="family"><br>
                     <h5>Receptionist</h5><br>
-                    <p class="mail">noah.lindqvist@havsviken.se</p><br>
+                    <p class="mail">✉ noah.lindqvist@havsviken.se</p><br>
                     <p>Noah sprider lugn energi och har en smittande förmåga 
                     att få människor att slappna av och känna sig välkomna.</p>
                 </div>
@@ -64,7 +102,7 @@
                     <h4>Isabella Nguyen</h4>
                     <img src="./images/Familjen/Isabella.png" class="family"><br>
                     <h5>Frukostbiträde & Bagare</h5><br>
-                    <p class="mail">isabella.nguyen@havsviken.se</p><br>
+                    <p class="mail">✉ isabella.nguyen@havsviken.se</p><br>
                     <p>Isabella är kreativ, varm och alltid på jakt efter 
                     nya sätt att skapa gemenskap och glädje omkring sig.</p>
                 </div>
@@ -72,7 +110,7 @@
                     <h4>Elinora Dalh</h4>
                     <img src="./images/Familjen/Elinora.png" class="family"><br>
                     <h5>Frukostbiträde & Konditor</h5><br>
-                    <p class="mail">elinora.dalh@havsviken.se</p><br>
+                    <p class="mail">✉ elinora.dalh@havsviken.se</p><br>
                     <p>Elinora är omtänksam och lite av en drömmare, 
                     ofta med en ny idé eller recept på gång.</p>
                 </div>
@@ -82,7 +120,7 @@
                     <h4>Maja Torres</h4>
                     <img src="./images/Familjen/Maja.png" class="family"><br>
                     <h5>Städerska & Husmor</h5><br>
-                    <p class="mail">maja.torres@havsviken.se</p><br>
+                    <p class="mail">✉ maja.torres@havsviken.se</p><br>
                     <p>Maja är energisk och full av liv, med en förmåga 
                     att vända även en grå dag till något roligt.</p>
                 </div>
@@ -90,7 +128,7 @@
                     <h4>Gabriel Andersson</h4>
                     <img src="./images/Familjen/Gabriel.png" class="family"><br>
                     <h5>Fastighet & Trädgård</h5><br>
-                    <p class="mail">gabriel.andersson@havsviken.se</p><br>
+                    <p class="mail">✉ gabriel.andersson@havsviken.se</p><br>
                     <p>Gabriel är den trygga typen som alla vänder sig 
                     till när något behöver lösas med lugn och humor.</p>
                 </div>
@@ -102,17 +140,17 @@
             </div>
         </div>
         <footer>
-        <div class="left-column">
-            <ul>Länkar
+        <nav class="left-column">
+            <ul><h3>Länkar</h3>
                 <li><a href="./index-homepage.html">Hem</a></li>
                 <li><a href="">Våra rum</a></li>
                 <li><a href="">Gästboken</a></li>
                 <li><a href="./index-about-us.html">Om oss</a></li>
                 <li><a href="">Kontakt</a></li>
             </ul>
-        </div>
+        </nav>
         <div class="middle-column">
-            Havsviken<br>
+            <h4 class="havsviken">Havsviken</h4><br>
             <img src="./images/logga.png" class="logo"><br>
             © Havsviken 2025
         </div>
@@ -122,4 +160,4 @@
             <img src="./images/iconer/icon-LinkedIn.png" class="icon">
         </div>
     </footer>
-    </main
+</main>
