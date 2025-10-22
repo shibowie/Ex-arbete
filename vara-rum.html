@@ -1,77 +1,133 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Havsviken Bed & Breakfast</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Havsviken B&amp;B</title>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vara-rum.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="index.html">
-                <img src="havsvikenbb/logga.png" class="logo" alt="Havsviken Bed & Breakfast">
-            </a>
-            <span class="logo-text">Havsviken</span>
-                <input id="menu-toggle" class="menu-toggle" type="checkbox" aria-label="Öppna huvudmeny">
-                <label for="menu-toggle" class="menu-btn" aria-hidden="true">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </label>
-            <nav id="huvudmeny" class="menu" aria-label="Huvudmeny">
-                <ul>                                                                
-                    <li><a href="index.html">Startsida</a></li>                       
-                    <li><a href="vara-rum.html">Våra rum</a></li>                   
-                    <li><a href="gastboken.html">Gästboken</a></li>                 
-                    <li><a href="kontakt.html">Kontakt</a></li>                     
-                    <li><a href="om-oss.html">Om oss</a></li>                         
-                </ul>
-            </nav>
-            <label for="menu-toggle" class="backdrop" aria-hidden="true"></label>
-        </div>
-    </header>
+<!-- Header -->
+<header class="header">
+    <!-- Meny i mobile -->
+    <div class="header-mobile">
+        <a href="index.html" class="logo-link">
+            <img src="havsvikenbb/logga.png" alt="Havsviken B&amp;B" class="logo">
+        </a>
+        <span class="havsviken-mobile">Havsviken</span>
+        <label for="menu-toggle" class="menu-btn" aria-label="Öppna huvudmeny" aria-controls="mobilmeny">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </div>
+    <input id="menu-toggle" class="menu-toggle" type="checkbox">
+    <nav id="mobilmeny" class="nav-meny" aria-label="Huvudmeny mobil">
+        <a href="index.html" class="link">Hem</a>
+        <a href="vara-rum.html" class="link">Våra rum</a>
+        <a href="gastboken.html" class="link">Gästboken</a>
+        <a href="om-oss.html" class="link">Om oss</a>
+        <a href="kontakt.html" class="link">Kontakt</a>
+    </nav>
+    <!-- Meny i desktop -->
+    <div class="header-desktop">
+        <a href="index.html" class="logo-link">
+            <img src="havsvikenbb/logga.png" alt="Havsviken B&amp;B" class="logo">
+        </a>
+    <span class="havsviken-desktop">Havsviken</span>
+        <a href="index.html" class="link">Hem</a>
+        <a href="vara-rum.html" class="link" aria-current="page">Våra rum</a>
+        <a href="gastboken.html" class="link">Gästboken</a>
+        <a href="om-oss.html" class="link">Om oss</a>
+        <a href="kontakt.html" class="link">Kontakt</a>
+    </div>
+</header>
 <main>
-    <section class="booking-wrap" aria-label="bokning">
-        <form class="booking-form">
-            <div class="field">
-                <label for="checkin">Incheckning</label>
-                <input id="checkin" type="text" placeholder="-- / -- / --">
+    <!-- Sid-intro -->
+    <section class="intro">
+        <h1>Våra rum</h1>
+        <p>Här kombineras enkel elegans med hemtrevlig komfort, oavsett om du reser ensam, med någon du tycker om eller i sällskap av vänner.</p>
+    </section>
+    <!-- Rumstyper-->
+    <section class="rooms" aria-label="Rumstyper">
+        <!-- Enkelrum -->
+        <article class="card">
+            <img src="havsvikenbb/vararum/enkelrum.png" alt="Enkelrum" class="card-img">
+            <div class="card-body">
+                <div class="row">
+                    <h2 class="card-title">Enkelrum</h2>
+                    <span class="price">fr. 899 kr/natt</span>
+                </div>
+                <p>Detta är ett enkelrum. Med havstema.</p>
+                <a href="#" class="btn">Boka rum</a>
             </div>
-            <div class="field">
-                <label for="checkout">Utcheckning</label>
-                <input id="checkout" type="text" placeholder="-- / -- / --">
+        </article>
+        <!-- Dubbelrum -->
+        <article class="card">
+            <img src="havsvikenbb/vararum/dubbelrum.png" alt="Dubbelrum" class="card-img">
+            <div class="card-body">
+                <div class="row">
+                    <h2 class="card-title">Dubbelrum</h2>
+                    <span class="price">fr. 1199 kr/natt</span>
+                </div>
+                <p>Detta är ett dubbelrum. Med havstema.</p>
+                <a href="#" class="btn">Boka rum</a>
             </div>
-            <button class="lediga-rum-btn" type="button">Kolla lediga rum</button>
-        </form>
-</section>
-    </main>
-        <footer>
-            <div class="footer-wrapper">
-                <nav aria-label="länkar i sidfoten">
-                    <ul class="footer-links">
-                        <li><a href="index.html">Hem</a></li>
-                        <li><a href="vara-rum.html" aria-current="page">Våra rum</a></li>
-                        <li><a href="gastboken.html">Gästboken</a></li>
-                        <li><a href="om-oss.html">Om oss</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </nav>
-            <div class="footer-brand">
-                <span class="logo-text">Havsviken</span>
-                <img src="havsvikenbb/logga.png" alt="" class="footer-logo">
+        </article>
+        <!-- Kompisrum -->
+        <article class="card">
+            <img src="havsvikenbb/vararum/kompisrum.png" alt="Kompisrum" class="card-img">
+            <div class="card-body">
+                <div class="row">
+                    <h2 class="card-title">Kompisrum</h2>
+                    <span class="price">fr. 1199 kr/natt</span>
+                </div>
+                <p>Detta är ett kompisrum. Med havstema.</p>
+                <a href="#" class="btn">Boka rum</a>
             </div>
-                <ul class="social-list" aria-label="sociala medier">
-                    <li><a href="https://facebook.com/havsvikenbb" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="havsvikenbb/icons/facebook.svg" alt="" width="28" height="28"></a></li>
-                    <li><a href="https://linkedin.com/company/havsvikenbb" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="havsvikenbb/icons/linkedin.svg" alt="" width="28" height="28"></a></li>
-                    <li><a href="https://instagram.com/havsvikenbb" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="havsvikenbb/icons/instagram.svg" alt="" width="28" height="28"></a></li>
-                </ul>
-            <p class="copyright">© Havsviken B&amp;B 2025</p>
+        </article>
+        <!-- Sviten -->
+        <article class="card">
+            <img src="havsvikenbb/vararum/sviten.png" alt="Sviten" class="card-img">
+            <div class="card-body">
+                <div class="row">
+                    <h2 class="card-title">Sviten</h2>
+                    <span class="price">fr. 1599 kr/natt</span>
+                </div>
+                <p>Detta är en svit. Med havstema.</p>
+                <a href="#" class="btn">Boka rum</a>
             </div>
-        </footer>
+        </article>
+    </section>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-left">
+            <h3 class="footer-title">Länkar</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="vara-rum.html">Våra rum</a></li>
+                <li><a href="gastboken.html">Gästboken</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    <div class="footer-center">
+        <span class="havsviken-footer">Havsviken</span>
+        <img src="havsvikenbb/logga.png" alt="" class="footer-logo">
+    </div>
+        <div class="footer-right">
+            <h3 class="footer-title">Följ oss</h3>
+            <div class="social-list">
+                <img src="havsvikenbb/ikoner/icon-Facebook.png" class="icon" alt="Facebook">
+                <img src="havsvikenbb/ikoner/icon-InstagramOld.png" class="icon" alt="Instagram">
+                <img src="havsvikenbb/ikoner/icon-LinkedIn.png" class="icon" alt="LinkedIn">
+            </div>
+        </div>
+    </div>
+    <p class="copy">© Havsviken B&amp;B 2025</p>
+</footer>
 </body>
 </html>
