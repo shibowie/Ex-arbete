@@ -11,15 +11,23 @@
     --offwhite: #FDFAF1;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: "Jura", sans-serif;
     color: black;
     background: var(--offwhite);
     line-height: 1.5;
+}
+
+main {
+    width: 100vw;
+    flex: 1 0 auto;        
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
 }
 
 img {
@@ -130,10 +138,6 @@ img {
     text-decoration: none;
 }
 
-main {
-    display: flex;
-}
-
 .havsviken {
     font-family: "Allura", cursive;
 }
@@ -145,13 +149,15 @@ main {
     font-size: 32px;
     font-weight: 300;
     letter-spacing: -1px;
+    line-height: 1.1;
     color: $primaryNavy;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 0px;
 }
 
 .historia p {
-    max-width: 400px;
+    max-width: 80vw;
     text-align: justify;
     line-height: 28px;
     margin: 20px auto;
@@ -160,6 +166,11 @@ main {
         font-size: 1.2rem;
         line-height: 4vh;
     }
+}
+
+.motto {
+    margin-top: 20px;
+    font-size: 2rem;
 }
 
 #title-family {
@@ -208,6 +219,7 @@ main {
 .mail {
     text-align: start;
     margin: -15px 0;
+    word-wrap: initial;
     &:hover {
         text-decoration: underline;
         cursor: pointer;
