@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Havsviken B&amp;B</title>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <!-- Meny i mobile -->
+    <div class="header-mobile">
+        <a href="index.html" class="logo-link">
+            <img src="havsvikenbb/logga.png" alt="Havsviken B&amp;B" class="logo">
+        </a>
+        <span class="havsviken-mobile">Havsviken</span>
+        <label for="menu-toggle" class="menu-btn" aria-label="Öppna huvudmeny" aria-controls="mobilmeny">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </div>
+    <input id="menu-toggle" class="menu-toggle" type="checkbox">
+    <nav id="mobilmeny" class="nav-meny" aria-label="Huvudmeny mobil">
+        <a href="index.html" class="link">Hem</a>
+        <a href="vara-rum.html" class="link">Våra rum</a>
+        <a href="gastboken.html" class="link">Gästboken</a>
+        <a href="om-oss.html" class="link">Om oss</a>
+        <a href="kontakt.html" class="link">Kontakt</a>
+    </nav>
+    <!-- Meny i desktop -->
+    <div class="header-desktop">
+        <a href="index.html" class="logo-link">
+            <img src="havsvikenbb/logga.png" alt="Havsviken B&amp;B" class="logo">
+        </a>
+    <span class="havsviken-desktop">Havsviken</span>
+        <a href="index.html" class="link">Hem</a>
+        <a href="vara-rum.html" class="link">Våra rum</a>
+        <a href="gastboken.html" class="link">Gästboken</a>
+        <a href="om-oss.html" class="link">Om oss</a>
+        <a href="kontakt.html" class="link">Kontakt</a>
+    </div>
+</header>
+<main>
+    <!-- Sid-intro -->
+    <section class="intro">
+        <h1>Kontakt</h1>
+        <p>Har du några frågor eller funderingar? Tveka inte att höra av dig till oss!</p>
+    </section>
+    <!-- Kontakt-information -->
+    <section class="contact-info">
+        <h2>Öppettider</h2>
+            <p>Vardagar: kl 8–20<br>Helger: kl 9–21</p>
+        <h2>Kontakta oss</h2>
+            <p>Tel: <a href="tel:+46734579838">073-457 98 38</a><br>
+            Mail: <a href="mailto:info@havsviken.com">info@havsviken.com</a></p>
+        <h2>Adress</h2>
+            <address>
+            Havsviken 23<br>
+            152 70 Havsviken
+            </address>
+    </section>
+    <!-- Kontorsbild + formulär -->
+    <section class="contact-wrap" aria-label="Bild på kontor och formulär">
+        <div class="office"><img src="havsvikenbb/kontor.png" alt="Kontor på Havsviken B&B"></div>
+        <form class="contact-form" action="#" method="post" novalidate>
+            <p class="or">Eller fyll i vårt formulär</p>
+                <div class="field">
+                    <label for="namn">För- och efternamn</label>
+                    <input id="namn" name="namn" type="text" placeholder="för- och efternamn" required>
+                </div>
+                <div class="field">
+                    <label for="epost">E-post</label>
+                    <input id="epost" name="epost" type="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="field">
+                    <label for="amne">Välj ämne</label>
+                    <select id="amne" name="amne" required>
+                        <option value="">Välj ämne</option>
+                        <option>Bokning av rum</option>
+                        <option>Frågor om Havsviken</option>
+                        <option>Övrigt</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="meddelande">Meddelande</label>
+                    <textarea id="meddelande" name="meddelande" rows="6" placeholder="Skriv ditt meddelande här..." required></textarea>
+                </div>
+            <button class="btn" type="submit">Skicka</button>
+        </form>
+    </section>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-left">
+            <h3 class="footer-title">Länkar</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="vara-rum.html">Våra rum</a></li>
+                <li><a href="gastboken.html">Gästboken</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    <div class="footer-center">
+        <span class="havsviken-footer">Havsviken</span>
+        <img src="havsvikenbb/logga.png" alt="" class="footer-logo">
+    </div>
+        <div class="footer-right">
+            <h3 class="footer-title">Följ oss</h3>
+            <div class="social-list">
+                <img src="havsvikenbb/ikoner/icon-Facebook.png" class="icon" alt="Facebook">
+                <img src="havsvikenbb/ikoner/icon-InstagramOld.png" class="icon" alt="Instagram">
+                <img src="havsvikenbb/ikoner/icon-LinkedIn.png" class="icon" alt="LinkedIn">
+            </div>
+        </div>
+    </div>
+    <p class="copy">© Havsviken B&amp;B 2025</p>
+</footer>
+</body>
+</html>

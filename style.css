@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --darkblue: #0F456C;
+    --lightblue: #F0F8FA;
+    --beige: #F5E7BA;
+    --offwhite: #FDFAF1;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Jura", sans-serif;
+    color: #000000;
+    background: var(--offwhite);
+    line-height: 1.5;
+}
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+.header {
+    background: var(--darkblue);
+    padding: 16px 12px 12px 12px;
+}
+.header-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.logo-link {
+    display: inline-flex;
+}
+.logo {
+    height: 64px;
+}
+.havsviken-mobile {
+    flex: 1 1 auto;
+    text-align: center;
+    margin-right: 8px;
+    font-family: "Allura", cursive;
+    font-size: 24px;
+    color: var(--beige);
+}
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -9999px;
+}
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+.bar {
+    height: 2px;
+    width: 24px;
+    background: var(--beige);
+}
+.nav-meny {
+    display: none;
+    margin-top: 8px;
+    padding: 8px 12px 12px 12px;
+}
+.nav-meny .link {
+    display: block;
+    color: var(--beige);
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 0;
+}
+.nav-meny .link + .link {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+#menu-toggle:checked ~ .nav-meny {
+    display: block;
+}
+
+/* Desktop-header */
+.header-desktop {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+    margin-right: 12px;
+}
+.header-desktop .havsviken-desktop {
+    font-family: "Allura", cursive;
+    font-size: 28px;
+    color: var(--beige);
+}
+.header-desktop .link {
+    color: var(--beige);
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+.header-desktop .link:hover {
+    text-decoration: underline;
+}
+
+/* Sid-intro */
+.intro {
+    padding: 16px;
+    padding-bottom: 8px;
+    text-align: center;
+    max-width: 60ch;
+    margin: 0 auto;
+}
+.intro h1 {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+}
+.intro p {
+    margin-bottom: 0;
+}
+
+/* Rum */
+.rooms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.card {
+    background: var(--offwhite);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    min-width: 260px;
+}
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 16px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+.card-title {
+    font-size: 20px;
+    margin: 0;
+}
+.price {
+    font-weight: 600;
+}
+.btn {
+    margin-top: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+    background: var(--darkblue);
+    color: var(--beige);
+    text-decoration: none;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Kontakt */
+.contact-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.contact-info {
+    background: var(--offwhite);
+    text-align: center;
+    padding: 0 16px 24px 16px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.contact-info h2 {
+    color: var(--darkblue);
+    font-size: 20px;
+    margin: 0 0 4px 0;
+}
+.contact-info h2:not(:first-of-type) {
+    margin-top: 16px;
+}
+.contact-info a {
+    color: var(--darkblue);
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.office {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--lightblue);
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+.contact-form .or {
+    text-align: center;
+    font-weight: 600;
+    color: var(--darkblue);
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+input {
+    padding: 10px 12px;
+    border: 1px solid var(--darkblue);
+    border-radius: 6px;
+    font-size: 15px;
+    background: #ffffff;
+}
+select {
+    padding: 10px 12px;
+    border: 1px solid var(--darkblue);
+    border-radius: 6px;
+    font-size: 15px;
+    background: #ffffff;
+}
+textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--darkblue);
+    border-radius: 6px;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+/* Footer */
+.footer {
+    background: var(--darkblue);
+    color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+.footer-top {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 24px 6px 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+.footer-left {
+    flex: 1 1 0;
+    text-align: left;
+}
+.footer-center {
+    flex: 1 1 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+.footer-right {
+    flex: 1 1 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer-title {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+}
+.footer-links {
+    font-size: 16px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.footer-links a {
+    color: var(--beige);
+    text-decoration: none;
+}
+.havsviken-footer {
+    font-family: "Allura", cursive;
+    font-size: 32px;
+    color: var(--beige);
+    display: inline-block;
+}
+.footer-logo {
+    height: 96px;
+    margin: 6px auto 0 auto;
+}
+.social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.copy {
+    margin: 0;
+    margin-top: auto;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 16px 8px 16px;
+}
+
+/* Breakpoint */
+@media (min-width: 768px) {
+.header-mobile {
+    display: none;
+}
+.nav-meny {
+    display: none;
+}
+.header-desktop {
+    display: flex;
+}
+.rooms .card {
+    flex: 1 1 calc(50% - 8px);
+}
+.contact-info {
+    padding: 0 24px 32px 24px;
+    font-size: 18px;
+}
+.contact-wrap {
+    gap: 32px;
+    padding: 0 24px;
+}
+.office {
+    max-width: 600px;
+}
+.contact-form {
+    max-width: 600px;
+    padding: 32px;
+    font-size: 16px;
+}
+}
