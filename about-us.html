@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Havsviken</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300..700&family=Rouge+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
-    <style>
-        html {
-            font-size: 16px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Havsviken B&B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Jura:wght@300..700&family=League+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <header class="header">
-    
+<!-- Header -->
+<header class="header">
+    <!-- Meny i mobile -->
     <div class="header-mobile">
-        <a href="./index-homepage.html">
-            <img src="./images/logga.png" alt="Havsviken B&B" class="logo">
+        <a href="./index-homepage.html" class="logo-link">
+            <img src="havsvikenbb/logga.png" alt="Havsviken B&B" class="logo">
         </a>
         <span class="havsviken-mobile">Havsviken</span>
         <label for="menu-toggle" class="menu-btn" aria-label="Öppna huvudmeny" aria-controls="mobilmeny">
@@ -30,35 +26,29 @@
     </div>
     <input id="menu-toggle" class="menu-toggle" type="checkbox">
     <nav id="mobilmeny" class="nav-meny" aria-label="Huvudmeny mobil">
-        <a href="index.html" class="link">Hem</a>
+        <a href="./homepage.html" class="link">Hem</a>
         <a href="vara-rum.html" class="link">Våra rum</a>
         <a href="gastboken.html" class="link">Gästboken</a>
-        <a href="om-oss.html" class="link">Om oss</a>
+        <a href="./about-us.html" class="link">Om oss</a>
         <a href="kontakt.html" class="link">Kontakt</a>
     </nav>
-    
+    <!-- Meny i desktop -->
     <div class="header-desktop">
-        <a href="index.html">
-            <img src="./images/logga.png" alt="Havsviken B&B" class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="havsvikenbb/logga.png" alt="Havsviken B&B" class="logo">
         </a>
     <span class="havsviken-desktop">Havsviken</span>
-        <a href="./index-homepage.html" class="link">Hem</a>
-        <a href="vara-rum.html" class="link" aria-current="page">Våra rum</a>
+    <nav class="menu-desktop">
+        <a href="./homepage.html" class="link">Hem</a>
+        <a href="vara-rum.html" class="link">Våra rum</a>
         <a href="gastboken.html" class="link">Gästboken</a>
-        <a href="./index-about-us.html" class="link">Om oss</a>
+        <a href="./about-us.html" class="link">Om oss</a>
         <a href="kontakt.html" class="link">Kontakt</a>
+    </nav>
+        
     </div>
 </header>
-    <div class="room-check">
-        <div class="check">incheckning<br>
-            <input type="date" name="incheckning" class="check-date">
-        </div>
-        <div class="check">utcheckning<br>
-            <input type="date" name="utcheckning" class="check-date">
-        </div>
-        <button type="submit" id="check-btn">Kolla<br>lediga rum</button>
-    </div>
-    <main>
+<main>
         <h2 id="about">Havsvikens historia</h2>
         <div class="historia">
             <p>Det sägs att Havsviken föddes ur havets egen längtan efter sällskap. En gång i tiden stod här en liten fiskarstuga, 
@@ -80,7 +70,7 @@
         <div class="whole-family-container">
 
             <article class="employee">                    
-                <img src="./images/Familjen/River.png" class="family">
+                <img src="./images/employees/River.png" alt="Bild på anställd, River" class="family">
                 <div class="text-box">
                     <h4>River Amari,</h4> <h5>Receptionist</h5>
                     <p class="mail">✉ river.amari@havsviken.se</p>
@@ -90,7 +80,7 @@
             </article>
 
             <article class="employee">
-                <img src="./images/Familjen/Noah.png" class="family">
+                <img src="./images/employees/Noah.png" alt="Bild på anställd, Noah" class="family">
                 <div class="text-box">
                     <h4>Noah Lindqvist,</h4> <h5>Receptionist</h5>
                     <p class="mail">✉ noah.lindqvist@havsviken.se</p>
@@ -101,7 +91,7 @@
 
             
             <article class="employee">
-                <img src="./images/Familjen/Isabella.png" class="family">
+                <img src="./images/employees/Isabella.png" alt="Bild på anställd, Isabella" class="family">
                 <div class="text-box">
                     <h4>Isabella Nguyen,</h4> <h5>Frukostbiträde & Bagare</h5>
                     <p class="mail">✉ isabella.nguyen@havsviken.se</p>
@@ -111,7 +101,7 @@
             </article>
 
             <article class="employee">
-                <img src="./images/Familjen/Elinora.png" class="family">
+                <img src="./images/employees/Elinora.png" alt="Bild på anställd, Elinora" class="family">
                 <div class="text-box">
                     <h4>Elinora Dalh,</h4> <h5>Frukostbiträde & Konditor</h5>
                     <p class="mail">✉ elinora.dalh@havsviken.se</p>
@@ -121,7 +111,7 @@
             </article>
 
             <article class="employee">
-                <img src="./images/Familjen/Maja.png" class="family">
+                <img src="./images/employees/Maja.png" alt="Bild på anställd, Maja" class="family">
                 <div class="text-box">
                     <h4>Maja Torres,</h4> <h5>Städerska & Husmor</h5>
                     <p class="mail">✉ maja.torres@havsviken.se</p>
@@ -131,7 +121,7 @@
             </article>
 
             <article class="employee">
-                <img src="./images/Familjen/Gabriel.png" class="family">
+                <img src="./images/employees/Gabriel.png" alt="Bild på anställd, Gabriel" class="family">
                 <div class="text-box">
                     <h4>Gabriel Andersson,</h4> <h5>Fastighet & Trädgård</h5>
                     <p class="mail">✉ gabriel.andersson@havsviken.se</p>
@@ -142,41 +132,53 @@
 
             <div class="the-owners">
                 <h4>Josef & Emil Bäcklund</h4>
-                <img src="./images/Familjen/Josef & Emil.png" id="the-owners">
-                <h5>VD & Partner</h5>
-                <p class="mail">✉ josef.backlund@havsviken.se</p>
-                <p>Josef <i>(vänster)</i> har en stor kärlek för inredning och gemenskap. 
-                Tillsammans med sin man Emil ser han till att alla på Havsviken 
-                alltid känner sig som hemma, gäster & anställda.</p>
-                <br>
-                <h5>Ägare & Partner</h5>
-                <p class="mail">✉ emil.backlund@havsviken.se</p>
-                <p>Emil <i>(höger)</i> är femte generationen att driva vårat 
-                fantastiska Havsviken. Han älskar att fiska & att hitta 
-                på teambuildings för sina anställda.</p>
+                <img src="./images/employees/Josef&Emil.png" alt="Bild på ägarna, Josef & Emil" id="the-owners">
+                <div class="text-box">
+                    <div class="josefs-coloum">
+                        <h5>VD & Partner</h5>
+                        <p class="mail">✉ josef.backlund@havsviken.se</p>
+                        <p>Josef <i>(vänster)</i> har en stor kärlek för inredning och gemenskap. 
+                        Tillsammans med sin man Emil ser han till att alla på Havsviken 
+                        alltid känner sig som hemma, gäster & anställda.</p>
+                    </div>
+                    <div class="emils-coloum">
+                        <h5>Ägare & Partner</h5>
+                        <p class="mail">✉ emil.backlund@havsviken.se</p>
+                        <p>Emil <i>(höger)</i> är femte generationen att driva vårat 
+                        fantastiska Havsviken. Han älskar att fiska & att hitta 
+                        på teambuildings för sina anställda.</p>
+                    </div>                    
+                </div>
             </div>
         </div>
     </main>
-    <footer>
-        <nav class="left-column">
-            <ul><h3>Länkar</h3>
-                <li><a href="./index-homepage.html">Hem</a></li>
-                <li><a href="">Våra rum</a></li>
-                <li><a href="">Gästboken</a></li>
-                <li><a href="./index-about-us.html">Om oss</a></li>
-                <li><a href="">Kontakt</a></li>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-left">
+            <h3 class="footer-title">Länkar</h3>
+            <ul class="footer-links">
+                <li><a href="./homepage.html">Hem</a></li>
+                <li><a href="vara-rum.html">Våra rum</a></li>
+                <li><a href="gastboken.html">Gästboken</a></li>
+                <li><a href="./about-us.html">Om oss</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
-        </nav>
-        <div class="middle-column">
-            <h4 class="havsviken">Havsviken</h4><br>
-            <img src="./images/logga.png" class="logo"><br>
-            © Havsviken 2025
         </div>
-        <div class="right-column">
-            <img src="./images/iconer/icon-Facebook.png" class="icon">
-            <img src="./images/iconer/icon-Instagram Old.png" class="icon">
-            <img src="./images/iconer/icon-LinkedIn.png" class="icon">
+    <div class="footer-center">
+        <span class="havsviken-footer">Havsviken</span>
+        <img src="havsvikenbb/logga.png" alt="" class="footer-logo">
+    </div>
+        <div class="footer-right">
+            <h3 class="footer-title">Följ oss</h3>
+            <div class="social-list">
+                <img src="havsvikenbb/ikoner/icon-Facebook.png" class="icon" alt="Facebook">
+                <img src="havsvikenbb/ikoner/icon-InstagramOld.png" class="icon" alt="Instagram">
+                <img src="havsvikenbb/ikoner/icon-LinkedIn.png" class="icon" alt="LinkedIn">
+            </div>
         </div>
-    </footer>
+    </div>
+    <p class="copy">© Havsviken B&amp;B 2025</p>
+</footer>
 </body>
 </html>
