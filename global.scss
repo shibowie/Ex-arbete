@@ -12,7 +12,7 @@ body {
 
 header {
     @include flex-center-y;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     padding: 10px $padding-mobile-x;
     background-color: $primaryNavy;
     background: $primaryNavy;
@@ -73,7 +73,7 @@ header {
         @include desktop {
             margin: 0;
             position: static;
-            justify-content: flex-end;
+            justify-content: space-evenly;
 
             &:hover {
                 text-decoration: underline;
