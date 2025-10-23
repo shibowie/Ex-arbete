@@ -52,7 +52,7 @@ h1 {
   display: flex;
   gap: 1.4vw;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .navigering ul {
     flex-direction: column;
   }
@@ -133,7 +133,7 @@ p {
   width: 80vw;
   line-height: 24px;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   p {
     max-width: 775px;
     font-size: 1.2rem;
@@ -166,7 +166,7 @@ p {
 .small-text {
   font-size: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .small-text {
     width: auto;
     font-size: 28px;
@@ -180,7 +180,7 @@ p {
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .two-images {
     margin: 10px 0;
     width: 372px;
@@ -192,7 +192,7 @@ p {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .for-breakpoint {
     display: flex;
     flex-direction: row;
@@ -201,7 +201,7 @@ p {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .row-reverse {
     flex-direction: row-reverse;
   }
@@ -212,7 +212,7 @@ p {
   border: 2.5px solid #0F456C;
   border-radius: 28px;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   #rooms, #frukost {
     width: 369px;
     margin: 10px 0;
@@ -231,7 +231,7 @@ p {
   border: 2.5px solid #0F456C;
   border-radius: 28px;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   #galleri, #guest-book, #om-oss, #kontakt {
     width: 168px;
     height: 246px;
@@ -457,6 +457,12 @@ img {
   text-decoration: none;
 }
 
+@media (max-width: 500px) {
+  .room-check {
+    display: none;
+  }
+}
+
 .havsviken {
   font-family: "Allura", cursive;
 }
@@ -474,14 +480,13 @@ img {
   margin-top: 30px;
   margin-bottom: 0px;
 }
-
 .historia p {
   max-width: 80vw;
   text-align: justify;
   line-height: 28px;
   margin: 20px auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .historia p {
     max-width: 775px;
     font-size: 1.2rem;
@@ -490,8 +495,10 @@ img {
 }
 
 .motto {
-  margin-top: 20px;
-  font-size: 2rem;
+  margin: 40px;
+  font-size: 2.4rem;
+  font-family: "Rouge Script", cursive;
+  line-height: 46px;
 }
 
 #title-family {
@@ -522,27 +529,25 @@ img {
 .whole-family-container p {
   font-size: 16px;
   width: 36vw;
-  max-width: 280px;
   text-align: start;
   margin-top: 2px;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .whole-family-container p {
     font-size: 1rem;
+    max-width: 280px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .whole-family-container {
-    width: 96vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .mail {
   text-align: start;
-  margin: -15px 0;
+  margin: 0;
   word-wrap: initial;
 }
 .mail:hover {
@@ -550,24 +555,37 @@ img {
   cursor: pointer;
 }
 
-.employee-gruop {
+.employee {
+  align-self: center;
+  width: 90vw;
   display: flex;
-  align-content: center;
-  gap: 2vw;
+  align-items: center;
+  margin: 20px 0;
 }
-@media (min-width: 768px) {
-  .employee-gruop {
-    width: 96vw;
-    display: flex;
-    justify-content: space-evenly;
+.employee .family {
+  width: 90px;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.employee .text-box {
+  margin-left: 14px;
+}
+.employee .text-box h4, .employee .text-box h5 {
+  margin: 0;
+}
+.employee .text-box p {
+  width: 70vw;
+}
+@media (min-width: 500px) {
+  .employee .text-box p {
+    width: 90vw;
   }
 }
-
-.employee {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (min-width: 500px) {
+  .employee {
+    width: 40vw;
+  }
 }
 
 .family {
@@ -580,5 +598,16 @@ img {
 #the-owners {
   border: 2.5px solid #0F456C;
   border-radius: 28px;
+  width: 85vw;
+  margin-bottom: 20px;
+}
+
+.the-owners h4 {
+  text-align: center;
+}
+.the-owners h5 {
+  margin-bottom: 8px;
+}
+.the-owners p {
   width: 85vw;
 }/*# sourceMappingURL=main.css.map */

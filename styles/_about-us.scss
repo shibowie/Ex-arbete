@@ -138,6 +138,12 @@ img {
     text-decoration: none;
 }
 
+.room-check {
+    @media (max-width: $breakpoint-medium) {
+        display: none;
+    }
+}
+
 .havsviken {
     font-family: "Allura", cursive;
 }
@@ -154,6 +160,10 @@ img {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 0px;
+
+    @media (min-width: $breakpoint-medium) {
+        
+    }
 }
 
 .historia p {
@@ -169,8 +179,10 @@ img {
 }
 
 .motto {
-    margin-top: 20px;
-    font-size: 2rem;
+    margin: 40px;
+    font-size: 2.4rem;
+    font-family: "Rouge Script", cursive;
+    line-height: 46px;
 }
 
 #title-family {
@@ -186,39 +198,38 @@ img {
     align-items: center;
     row-gap: 18px;
     margin-bottom: 40px;
-    & h4 {
+    h4 {
         letter-spacing: -1px;
         font-weight: bold;
         font-size: 18px;
         margin: 14px 0;
     }
-    & h5 {
+    h5 {
         letter-spacing: -0.5px;
         margin: -6px 0;
         font-size: 16px;
+    
     }
-    & p {
+    p {
         font-size: 16px;
         width: 36vw;
-        max-width: 280px;
         text-align: start;
         margin-top: 2px;
         @media (min-width: $breakpoint-medium) {
         font-size: 1rem;
+        max-width: 280px;
         }
     }
     
     @media (min-width: $breakpoint-medium) {
-        width: 96vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
 .mail {
     text-align: start;
-    margin: -15px 0;
+    margin: 0;
     word-wrap: initial;
     &:hover {
         text-decoration: underline;
@@ -226,22 +237,33 @@ img {
     }
 }
 
-.employee-gruop {
-    display: flex;
-    align-content: center;
-    gap: 2vw;
-    @media (min-width: $breakpoint-medium) {
-        width: 96vw;
-        display: flex;
-        justify-content: space-evenly;
-    }
-}
-
 .employee {
-    width: 250px;
+    align-self: center;
+    width: 90vw;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    margin: 20px 0;
+    .family {
+        width: 90px;
+        height: 240px;
+        object-fit: cover;
+    }
+    .text-box {
+        margin-left: 14px;
+        h4, h5 {
+            margin: 0;
+        }
+        
+        p {
+            width: 70vw;
+            @media (min-width: $breakpoint-medium) {
+            width: 90vw;
+    }
+        }
+    }
+    @media (min-width: $breakpoint-medium) {
+        width: 40vw;
+    }
 }
 
 .family {
@@ -253,5 +275,18 @@ img {
 
 #the-owners {
     @include imageBorder;
-    width: 85vw;    
+    width: 85vw;
+    margin-bottom: 20px;
+}
+
+.the-owners {
+    h4 {
+        text-align: center;
+    }
+    h5 {
+        margin-bottom: 8px;
+    }
+    p {
+        width: 85vw;
+    }
 }
