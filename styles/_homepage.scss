@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #FDFAF1;
+    font-family: "Jura", sans-serif;
+    color: $primaryNavy;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 115px;
+    background-color: $primaryNavy;
+}
+
+.navigering ul {
+    @media (min-width: $breakpoint-medium) {
+        display: flex;
+        list-style: none;
+        gap: 5px;
+    }
+}
+
+.havsviken {
+    font-family: "Allura", cursive;
+    font-size: 42px;
+    font-weight: 100;
+    align-self: center;
+    color: $primarySand;
+}
+
+a {
+    color: $primarySand;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: $primaryLightBlue;
+    }
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 14px;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primarySand;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    @media (min-width: $breakpoint-medium) {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 80vw;
+    line-height: 1.4;
+    @media (min-width: $breakpoint-medium) {
+        max-width: 775px;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-top: 14px;
+    }
+}
+
+.contains-all-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.centered-text {
+    font-size: 2rem;
+    font-weight: 400;
+    @include centered-text;
+}
+
+.small-text {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    @media (min-width: $breakpoint-medium) {
+        width: auto;
+        font-size: 1.6rem;
+    }
+}
+
+.two-images {
+    margin: 16px 0;
+    display: flex;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: $breakpoint-medium) {
+        margin: 10px 0;
+        width: 372px;
+    }
+}
+
+.for-breakpoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $breakpoint-medium) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 775px;
+    }
+}
+
+.row-reverse {
+    @media (min-width: $breakpoint-medium) {
+        flex-direction: row-reverse;
+    }
+}
+
+#rooms, #frukost {
+    width: 94vw;
+    @include imageBorder;
+    
+    @media (min-width: $breakpoint-medium) {
+        width: 369px;
+        margin: 10px 0;
+        opacity: 0.8;
+        &:hover {
+        @include imageHover;
+    }
+    }
+}
+
+#galleri, #guest-book, #om-oss, #kontakt { 
+    width: 44vw;
+    @include imageBorder;
+
+    @media (min-width: $breakpoint-medium) {
+        width: 168px;
+        height: 246px;
+        object-fit: cover;
+        opacity: 0.8;
+        &:hover {
+        @include imageHover;
+    }
+    }
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 220px;
+    background-color: $primaryNavy;
+    color: #F4E6BB;
+    a {
+        text-decoration: none;
+        color: #F4E6BB;
+        &:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+}
+
+.left-column {
+    width: 100px;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+        margin: 5px;
+    }
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0 0 -34px 0;
+}
+
+.middle-column {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo {
+        margin-left: 0;
+        margin-bottom: -30px;
+    }
+}
+
+.right-column {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 8px;
+}
+
+.icon {
+    height: 46px;
+    width: 46px;
+    &:hover {
+        cursor: pointer;
+        scale: 1.2;
+    }
+}

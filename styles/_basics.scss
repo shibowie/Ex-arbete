@@ -1,0 +1,32 @@
+// VARIABLER
+
+$primaryNavy: #0F456C;
+$primarySand: #F4E6BB;
+$primaryLightBlue: #F0F8FA;
+
+
+// MIXINS
+
+@mixin imageHover {
+        opacity: 1;
+        cursor: pointer;
+        box-shadow: 2px 2px 6px gray;
+        scale: 1.02;
+    }
+@mixin imageBorder {
+    border: 2.5px solid $primaryNavy;
+    border-radius: 28px;
+}
+
+@mixin centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $primarySand;
+}
+
+// MEDIA QUERIES
+
+$breakpoint-medium: 700px;
