@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="restaurang.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+</head>
+<body>
+    <header>
+        <div class="logga">
+          <a href="index.html"><img src="logga.png" alt="" class="logga"></a>
+        </div>
+        <div class="havsviken">
+          <h1>Havsviken</h1>
+        </div>  
+        <div class="navigation">
+            <input type="checkbox" id="menyknapp" class="menyknapp" aria-controls="main-menu">
+        <label for="menyknapp" class="burgare" aria-label="navigation">
+            <span class="icon"></span>
+        </label>
+            <nav id="main-menu">
+            <ul class="meny">
+               <li><a href="index.html">Startsida</a></li>                       
+               <li><a href="vara-rum.html">Våra rum</a></li>                   
+               <li><a href="gastboken.html">Gästboken</a></li>                 
+               <li><a href="kontakt.html">Kontakt</a></li>                     
+               <li><a href="om-oss.html">Om oss</a></li>
+            </ul>   
+            </nav>  
+        </div>   
+    </header>
+    <div id="restaurang">
+      <h2>RESTAURANG HAVSVIKEN</h2>
+      <p>På Havsvikens restaurang möts du av en avslappnad atmosfär och smakupplevelser inspirerade av havet utanför dörren. Vi lagar all mat med kärlek och omtanke av lokala råvaror från kustens fiskare och gårdar i närheten. Njut av en fräsch frukostbuffé och säsongsbaserade rätter som speglar det bästa av det nordiska köket.</p>
+</div>
+<section class="matmeny" aria-labelledby="meny-titel">
+  <details>
+    <summary class="meny-summary">
+      <img src="restaurang.png" alt="Havsvikens restaurang" class="menybild">
+      <div class="meny-overlay">
+      <span class="menytext">Vår meny</span>
+    </summary>
+    <div class="rätter">
+    <section class="menysektion" aria-labelledby="förätter-title">
+      <h3>Havsvikens meny</h3>
+        <h4>Förätter</h4>
+      <ul>
+        <li>
+          <span class="dish">Rökt lax på rågbröd med pepparrotskräm</span>
+          <span class="pris">95</span>
+        </li>
+        <li>
+          <span class="dish">Rostad rödbetssallad med chevre</span>
+          <span class="pris">85</span>
+        </li>
+         <li>
+          <span class="dish">Havsvikens räkor</span>
+          <span class="pris">119</span>
+        </li>
+      </ul>
+    </section>
+    <section class="menysektion" aria-labelledby="huvudrätter-title">
+      <h4>Huvudrätter</h4>
+      <ul>
+<li>
+          <span class="dish">Dagens fångst med citronsås och potatispuré</span>
+          <span class="pris">235</span>
+        </li>
+        <li>
+          <span class="dish">Grillad entrecôte med örtsmör och kryftpotatis</span>
+          <span class="pris">245</span>
+        </li>
+        <li>
+          <span class="dish">Krustad rotfruktsgratäng med örtpesto</span>
+          <span class="pris">185</span>
+        </li>
+        <li>
+          <span class="dish">Havsvikens fiskgryta med saffran och aioli</span>
+          <span class="pris">225</span>
+        </li>
+      </ul>
+    </section>
+    <section class="menysektion" aria-labelledby="dessert-title">
+        <h4 id="desserts-title">Desserter</h4>
+        <ul>
+          <li>
+            <span class="dish">Vaniljpannacotta med blåbär</span>
+            <span class="pris">85</span>
+          </li>
+          <li>
+            <span class="dish">Havtornsglass med honung och mynta</span>
+            <span class="pris">75</span>
+          </li>
+          <li>
+            <span class="dish">Chokladfondant med hallonkompott</span>
+            <span class="pris">95</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </details>
+</section>
+<section class="matmeny" aria-labelledby="frukost-titel">
+  <details>
+    <summary class="meny-summary">
+      <img src="frukost.png" alt="Havsvikens restaurang" class="menybild">
+      <div class="meny-overlay">
+      <span class="menytext">Frukost</span>
+    </div>
+    </summary>
+     <section class="menysektion" aria-labelledby="förätter-title">
+       <h3>Frukost på Havsviken</h3>
+      <p>Börja dagen på bästa sätt med vår klassiska frukostbuffé med råvaror från lokala gårdar. Njut av färskt hembakat bröd, urval av pålägg, yogurt med topping och mycket mer. Vår frukost serveras i restaurangen varje dag kl 7-10.</p>
+      <ul>
+        <li>
+          <span class="dish">Frukostbuffé vuxen</span>
+          <span class="pris">165</span>
+        </li>
+        <li>
+          <span class="dish">Frukostbuffé barn</span>
+          <span class="pris">95</span>
+        </li>
+      </ul>
+     </section>
+    </details>
+    </section>
+    <section class="matmeny" aria-labelledby="reservation-titel">
+  <details>
+    <summary class="meny-summary">
+      <img src="restaurang.png" alt="Restaurangbord redo för reservation" class="menybild">
+      <div class="meny-overlay">
+        <span class="menytext">Reservation</span>
+      </div>
+    </summary>
+    <section class="menysektion formulär" aria-labelledby="boka-title">
+        <h3 id="boka-title">Boka ditt bord</h3>
+        <p>Använd formuläret nedan för att reservera ett bord i vår restaurang. Vi bekräftar din bokning via e-post.</p>
+        <form action="#" method="post" class="reservation-form">
+            <div class="form-group">
+                <label for="res_name">Ditt namn</label>
+                <input type="text" id="res_name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="res_email">E-post</label>
+                <input type="email" id="res_email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="res_date">Datum</label>
+                <input type="date" id="res_date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="res_time">Tid</label>
+                <input type="time" id="res_time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="res_guests">Antal gäster:</label>
+                <select id="res_guests" name="guests" required>
+                    <option value="1">1 person</option>
+                    <option value="2">2 personer</option>
+                    <option value="3">3 personer</option>
+                    <option value="4">4 personer</option>
+                    <option value="5">5+ personer</option>
+                </select>
+            </div>
+            <button type="submit" class="boka-knapp">Bekräfta Bokning</button>
+        </form>
+    </section>
+  </details>
+</section>
+
+       <footer>
+        <div class="left-column">
+            <p>Länkar</p>
+            <ul>
+                <li>Hem</li>
+                <li>Våra rum</li>
+                <li>Gästboken</li>
+                <li>Om oss</li>
+                <li>Kontakt</li>
+            </ul>
+        </div>
+        <div class="middle-column">
+            <p>Havsviken</p><br>
+            <img src="logga.png" class="logo"><br>
+            <p></p>© Havsviken 2025</p>
+        </div>
+        <div class="right-column">
+     <p>Följ oss</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" aria-label="Instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com" aria-label="Facebook" target="_blank">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="mailto:info@example.com" aria-label="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+        </div>
+    </footer>
+</body>
