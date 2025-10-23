@@ -192,76 +192,73 @@ img {
 
 
 /* Footer */
-.footer {
-    background: var(--darkblue);
-    color: var(--beige);
+footer {
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    min-height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 220px;
+    background-color: $primaryNavy;
+    color: #F4E6BB;
+    a {
+        text-decoration: none;
+        color: #F4E6BB;
+        &:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
 }
-.footer-top {
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 24px 24px 6px 24px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
+
+.left-column {
+    width: 100px;
 }
-.footer-left {
-    flex: 1 1 0;
-    text-align: left;
+
+h3 {
+    font-size: 1rem;
+    margin: 0;
 }
-.footer-center {
-    flex: 1 1 0;
-    text-align: center;
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+        margin: 5px;
+    }
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0 0 -34px 0;
+}
+
+.middle-column {
+    width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 32px;
+    justify-content: center;
+    .logo {
+        margin-left: 0;
+        margin-bottom: -30px;
+    }
 }
-.footer-right {
-    flex: 1 1 0;
-    text-align: right;
+
+.right-column {
+    width: 100px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: end;
+    row-gap: 8px;
 }
-.footer-title {
-    margin: 0 0 16px 0;
-    font-size: 16px;
-}
-.footer-links {
-    font-size: 16px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-.footer-links a {
-    color: var(--beige);
-    text-decoration: none;
-}
-.havsviken-footer {
-    font-family: "Allura", cursive;
-    font-size: 32px;
-    color: var(--beige);
-    display: inline-block;
-}
-.footer-logo {
-    height: 96px;
-    margin: 6px auto 0 auto;
-}
-.social-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-.copy {
-    margin: 0;
-    margin-top: auto;
-    text-align: center;
-    font-size: 12px;
-    padding: 0 16px 8px 16px;
+
+.icon {
+    height: 46px;
+    width: 46px;
+    &:hover {
+        cursor: pointer;
+        scale: 1.2;
+    }
 }
