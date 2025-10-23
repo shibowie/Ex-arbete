@@ -1,0 +1,292 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkblue:  #0F456C;  
+    --lightblue:  #F0F8FA; 
+    --beige:    #F5E7BA; 
+    --offwhite: #FDFAF1;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Jura", sans-serif;
+    color: black;
+    background: var(--offwhite);
+    line-height: 1.5;
+}
+
+main {
+    width: 100vw;
+    flex: 1 0 auto;        
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header {
+    background: var(--darkblue);
+    padding-top: 16px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.header-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo-link {
+    display: inline-flex;
+}
+
+.logo {
+    height: 64px;
+}
+
+.havsviken-mobile {
+    flex: 1 1 auto;
+    text-align: center;
+    margin-right: 8px;
+    font-family: "Allura", cursive;
+    font-size: 24px;
+    color: var(--beige);
+}
+
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -9999px;
+}
+
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.bar {
+    height: 2px;
+    width: 24px;
+    background: var(--beige);
+}
+
+.nav-meny {
+    display: none;
+    margin-top: 8px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.nav-meny .link {
+    display: block;
+    color: var(--beige);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.nav-meny .link + .link {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#menu-toggle:checked ~ .nav-meny {
+    display: block;
+}
+
+.header-desktop {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+    margin-right: 12px;
+}
+
+.header-desktop .havsviken-desktop {
+    font-family: "Allura", cursive;
+    font-size: 28px;
+    color: var(--beige);
+}
+
+.header-desktop .link {
+    color: var(--beige);
+    text-decoration: none;
+}
+
+.room-check {
+    @media (max-width: $breakpoint-medium) {
+        display: none;
+    }
+}
+
+.havsviken {
+    font-family: "Allura", cursive;
+}
+
+#about, #title-family {
+    background-color: $primarySand;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: $primaryNavy;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+
+    @media (min-width: $breakpoint-medium) {
+        
+    }
+}
+
+.historia p {
+    max-width: 80vw;
+    text-align: justify;
+    line-height: 28px;
+    margin: 20px auto;
+    @media (min-width: $breakpoint-medium) {
+        max-width: 775px;
+        font-size: 1.2rem;
+        line-height: 4vh;
+    }
+}
+
+.motto {
+    margin: 40px;
+    font-size: 2.4rem;
+    font-family: "Rouge Script", cursive;
+    line-height: 46px;
+}
+
+#title-family {
+    margin: 50px 0 20px 0;
+}
+
+.whole-family-container {
+    width: 96vw;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 18px;
+    margin-bottom: 40px;
+    h4 {
+        letter-spacing: -1px;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 14px 0;
+    }
+    h5 {
+        letter-spacing: -0.5px;
+        margin: -6px 0;
+        font-size: 16px;
+    
+    }
+    p {
+        font-size: 16px;
+        width: 36vw;
+        text-align: start;
+        margin-top: 2px;
+        @media (min-width: $breakpoint-medium) {
+        font-size: 1rem;
+        max-width: 280px;
+        }
+    }
+    
+    @media (min-width: $breakpoint-medium) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.mail {
+    text-align: start;
+    margin: 0;
+    word-wrap: initial;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.employee {
+    align-self: center;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    .family {
+        width: 90px;
+        height: 240px;
+        object-fit: cover;
+    }
+    .text-box {
+        margin-left: 14px;
+        h4, h5 {
+            margin: 0;
+        }
+        
+        p {
+            width: 70vw;
+            @media (min-width: $breakpoint-medium) {
+            width: 90vw;
+    }
+        }
+    }
+    @media (min-width: $breakpoint-medium) {
+        width: 40vw;
+    }
+}
+
+.family {
+    width: 36vw;
+    max-width: 210px;
+    @include imageBorder;
+
+}
+
+#the-owners {
+    @include imageBorder;
+    width: 85vw;
+    margin-bottom: 20px;
+}
+
+.the-owners {
+    h4 {
+        text-align: center;
+    }
+    h5 {
+        margin-bottom: 8px;
+    }
+    p {
+        width: 85vw;
+    }
+}
