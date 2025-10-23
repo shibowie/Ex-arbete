@@ -1,0 +1,360 @@
+@import 'config';
+
+body {
+    margin: 0;
+    background-color: $primarySand;
+    width: 100%;
+
+    @include desktop {
+        width: auto;
+    }
+}
+
+header {
+    @include flex-center-y;
+    justify-content: space-evenly;
+    padding: 10px $padding-mobile-x;
+    background-color: $primaryNavy;
+    background: $primaryNavy;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: $header-height;
+    z-index: 15000;
+
+    @include desktop {
+        justify-content: space-between;
+        padding: 10px $padding-desktop-x;
+    }
+
+    .logga img {
+        height: 100px;
+        width: 100px;
+        display: block;
+        position: relative;
+
+        @include desktop {
+            left: -20px;
+            margin: 0 10px;
+        }
+    }
+
+    .burgare {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 24px;
+        height: 20px;
+        padding: 10px;
+        z-index: 10000;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .havsviken {
+        margin-left: 25px;
+
+        @include desktop {
+            margin-left: 40px;
+            font-size: 28px;
+        }
+    }
+
+    .navigation {
+        position: relative;
+        z-index: 1000;
+        height: 100%;
+        @include flex-center-y;
+        margin: auto;
+        display: flex;
+
+        @include desktop {
+            margin: 0;
+            position: static;
+            justify-content: flex-end;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .menyknapp {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 10001;
+
+        &:checked {
+            ~ .burgare .icon {
+                background: transparent;
+
+                &::before {
+                    transform: rotate(45deg);
+                    top: 0;
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                    top: 0;
+                }
+            }
+
+            ~ #main-menu {
+                max-height: 100vh;
+            }
+           
+
+        }
+    }
+
+
+
+    .icon,
+    .icon::before,
+    .icon::after {
+        display: block;
+        background: $primaryBeige;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        @include transition-ease;
+    }
+
+    .icon {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+
+        &::before {
+            content: "";
+            top: -8px;
+        }
+
+        &::after {
+            content: "";
+            top: 8px;
+        }
+    }
+
+    #main-menu {
+        position: fixed;
+        top: $header-height;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 0;
+        overflow-y: auto;
+        @include transition-ease(max-height);
+        background-color: $primaryNavy;
+        z-index: 999;
+
+        @include desktop {
+            position: static;
+            max-height: none;
+            width: auto;
+            background-color: transparent;
+            margin: auto 0 auto auto;
+            flex-grow: 1;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            @include desktop {
+                flex-direction: row;
+                gap: 10px;
+                justify-content: flex-end;
+                height: 100%;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 20px;
+            color: $primaryBeige;
+            text-decoration: none;
+            @include font-style($font-jura);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            @include transition-ease(background-color, 0.2s);
+
+            @include desktop {
+                padding: 10px 15px;
+                border-bottom: none;
+            }
+
+            &:hover {
+                background-color: darken($primaryNavy, 5%);
+
+                @include desktop {
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    @include font-style($font-allura);
+    color: $primaryBeige;
+    font-size: $font-size-h1;
+    margin: 0;
+
+    @include desktop {
+        position: relative;
+        right: 20%;
+    }
+}
+
+main {
+    width: auto;
+    padding-top: 150px;
+    overflow-x: hidden;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+
+    @include desktop {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+}
+h2,
+h3,
+h4 {
+    color: $primaryNavy;
+    @include font-style($font-jura);
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+h2 {
+     @include desktop {
+        font-size: 1.9rem;
+    }
+}
+h3 {
+        @include desktop {
+        font-size: 1.5rem;
+    }
+    }
+
+h4 {
+    @include desktop {
+        font-size: 1.2rem;
+    }
+}
+p {
+    display: inline-block;
+    @include font-style($font-jura);
+}
+
+ul {
+    list-style-type: none;
+    @include font-style($font-jura);
+    padding: 0;
+}
+
+button {
+    background-color: $primaryNavy;
+    color: $primaryBeige;
+    @include font-style($font-jura);
+    text-align: center;
+    margin: 30px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    @include transition-ease;
+
+    &:hover {
+        background-color: $primaryBeige;
+        color: $primaryNavy;
+        border: 2px solid $primaryNavy;
+        cursor: pointer;
+    }
+}
+
+footer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+    background-color: $primaryNavy;
+    color: $primarySand;
+    width: 100%;
+    padding: 10px $padding-mobile-x;
+    box-sizing: border-box;
+
+    @include desktop {
+        height: auto;
+        padding: 30px $padding-desktop-x;
+    }
+     
+    p {
+      align-items: flex-start;
+    }
+
+    #copy p {
+        @include font-style($font-jura);
+        margin: 0;
+        margin-top: auto;
+        text-align: center;
+        font-size: 12px;
+        padding: 0 16px 8px 16px;
+    }
+
+    .middle-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        gap: 0;
+
+        p {
+            margin: 0px;
+            @include font-style($font-allura);
+            font-size: 1.8rem;
+        }
+
+        .logo {
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    .social-icons {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+
+        a {
+            color: $primarySand;
+            font-size: 24px;
+            margin: 0 10px;
+            @include transition-ease(color, 0.3s ease);
+            text-decoration: none;
+
+            &:hover {
+                color: $primaryBlue;
+            }
+        }
+    }
+}

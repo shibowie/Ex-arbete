@@ -1,0 +1,263 @@
+@charset "UTF-8";
+.formulär {
+  width: auto;
+}
+@media (min-width: 768px) {
+  .formulär {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .formulär {
+    max-width: 800px;
+    justify-self: center;
+  }
+}
+
+#nytt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#nytt label {
+  font-family: "Jura", sans-serif;
+}
+#nytt input[type=text],
+#nytt input[type=file],
+#nytt textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #E1F1F4;
+  border: 1px solid #0F456C;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: "Jura", sans-serif;
+  font-weight: 400;
+  margin-top: 5px;
+}
+#nytt textarea {
+  min-height: 100px;
+}
+#nytt .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+#nytt .rating label {
+  font-size: 1.3rem;
+  margin-right: 15px;
+  color: #7f7e7a;
+  display: inline-block;
+  font-family: "Jura", sans-serif;
+}
+@media (min-width: 768px) {
+  #nytt .rating label {
+    margin-right: 50px;
+    font-size: 1.5em;
+  }
+}
+#nytt input[type=radio]:checked ~ label,
+#nytt label:hover,
+#nytt label:hover ~ label {
+  color: gold;
+  scale: 1.02;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .grid {
+    max-width: 1200px;
+    gap: 0px;
+    padding: 40px;
+    align-items: stretch;
+    min-height: 650px;
+  }
+}
+
+.gästbok {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+@media (min-width: 768px) {
+  .gästbok {
+    margin-bottom: 130px;
+  }
+}
+
+.gästkort {
+  height: 140px;
+  width: 140px;
+  border-radius: 18px;
+  background-color: #E1F1F4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .gästkort {
+    height: 200px;
+    width: 200px;
+    border-radius: 18px;
+    background-color: #E1F1F4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gästkort:hover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px gray;
+    scale: 1.02;
+  }
+}
+.gästkort .gästlabel {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #0F456C;
+  font-family: "Jura", sans-serif;
+  line-height: 35px;
+}
+@media (min-width: 768px) {
+  .gästkort .gästlabel {
+    font-size: 1.6em;
+    line-height: 50px;
+  }
+}
+.gästkort .gästbild {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  margin: 10px;
+  display: block;
+}
+@media (min-width: 768px) {
+  .gästkort .gästbild {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    margin: 25px;
+  }
+}
+.gästkort .popup {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  transition: opacity 0.3s, visibility 0.3s;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gästkort .popup .popup-content {
+  width: 300px;
+  height: 170px;
+  background-color: #E1F1F4;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  justify-content: space-evenly;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .gästkort .popup .popup-content {
+    width: 600px;
+    height: 250px;
+    gap: 30px;
+  }
+}
+.gästkort .popup .popup-content .popup-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  overflow-y: auto;
+  font-family: "Jura", sans-serif;
+  height: 100%;
+  justify-content: space-around;
+}
+.gästkort .popup .popup-content .popup-text h3 {
+  margin: 0 0 5px 0;
+  color: #0F456C;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .gästkort .popup .popup-content .popup-text h3 {
+    font-size: 1.6em;
+  }
+}
+.gästkort .popup .popup-content .popup-text p {
+  margin: 0;
+  font-size: 0.8em;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .gästkort .popup .popup-content .popup-text p {
+    font-size: 1em;
+  }
+}
+.gästkort .popup .popup-content .popup-img {
+  width: 115px;
+  height: 175px;
+  border-radius: 8px;
+  align-self: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .gästkort .popup .popup-content .popup-img {
+    width: 180px;
+    height: 220px;
+  }
+}
+.gästkort .popup .popup-content .close {
+  position: absolute;
+  top: -5px;
+  right: 2px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #0F456C;
+  line-height: 1;
+}
+.gästkort > .popup > .close {
+  display: none;
+}
+
+#gäst1:checked ~ .popup,
+#gäst2:checked ~ .popup,
+#gäst3:checked ~ .popup,
+#gäst4:checked ~ .popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+#gäst1:checked ~ .popup .popup-content,
+#gäst2:checked ~ .popup .popup-content,
+#gäst3:checked ~ .popup .popup-content,
+#gäst4:checked ~ .popup .popup-content {
+  transform: scale(1);
+}/*# sourceMappingURL=guestbook.css.map */

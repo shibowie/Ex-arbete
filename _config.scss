@@ -1,0 +1,58 @@
+$primaryNavy: #0F456C;
+$primarySand: #FDFAF1;
+$primaryBeige: #F5E7BA;
+$primaryBlue: #E1F1F4;
+
+$font-allura: "Allura", cursive;
+$font-jura: "Jura", sans-serif;
+$font-size-h1: 2.6rem;
+
+$max-mobile-width: 440px;
+$breakpoint-medium: 768px; 
+$breakpoint-large: 992px;
+$header-height: 120px;
+$transition-speed: 0.3s;
+$padding-mobile-x: 20px;
+$padding-desktop-x: 50px;
+
+@mixin font-style($family, $weight: 400, $style: normal) {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-optical-sizing: auto;
+}
+
+@mixin transition-ease($properties: all, $speed: $transition-speed) {
+    transition: $properties $speed ease-in-out;
+}
+
+@mixin flex-center-y {
+    display: flex;
+    align-items: center;
+}
+
+
+@mixin imageHover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px gray;
+    scale: 1.02;
+}
+
+@mixin imageBorder {
+    border: 2.5px solid $primaryNavy;
+    border-radius: 28px;
+}
+
+
+@mixin desktop {
+    @media (min-width: $breakpoint-medium) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: $breakpoint-large) {
+        @content;
+    }
+}

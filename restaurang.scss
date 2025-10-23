@@ -1,0 +1,210 @@
+@import 'config';
+
+#restaurang {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px $padding-mobile-x;
+    text-align: center;
+    box-sizing: border-box;
+
+    @include desktop {
+        padding: 30px $padding-desktop-x;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+.meny-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px; 
+    width: 100%;
+    box-sizing: border-box;
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0px;
+        width: auto;
+        margin: 0 auto;
+        padding: 30px $padding-desktop-x;
+    }
+
+
+  
+}
+
+.menybild {
+    opacity: 0.8;
+    width: 350px;
+    display: block;
+    height: auto;
+    object-fit: contain;
+
+    @include desktop {
+        width: 235px;
+    }
+
+    @include large {
+        width: 300px;
+    }
+    @include imageBorder
+}
+
+.menytext {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: $primaryBeige;
+    z-index: 10;
+
+    @include desktop {
+        font-size: 20px
+    }
+    
+     @include large {
+        font-size: 32px
+    }
+
+    @include font-style($font-jura);
+}
+
+.meny-overlay {
+    top: 40%;
+    left: 50%;
+    bottom: 40%;
+    height: 60px;
+    width: 354px;
+    opacity: 0.7;
+    position: absolute;
+    transform: translate(-50%);
+    background-color: $primaryNavy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+
+    @include desktop {
+        width: 239px;
+        height: 40px;
+        bottom: 50%;
+        top: 38%;
+    }
+
+    @include large {
+        top: 40%;
+        left: 50%;
+        bottom: 40%;
+        height: 60px;
+        width: 304px;
+    }
+}
+
+.matmeny {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+
+    @include desktop {
+        width: 100%;
+    }
+
+
+}
+
+.matmeny li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+}
+
+.pris {
+    align-self: flex-end;
+}
+
+.meny-summary {
+    list-style: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    @include transition-ease(transform);
+    position: relative;
+    width: 354px;
+    margin-bottom: 20px;
+
+    @include desktop { 
+        max-width: none;
+        width: 239px;
+    }
+
+    @include large {
+        width: 304px;
+        max-width: none;
+    }
+&:hover {
+    @include imageHover;
+    border-radius: 25px;
+}
+}
+
+.rätter {
+    list-style: none;
+    border-radius: 15px;
+    margin-top: 10px;
+
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menysektion {
+        width: 100%;
+        border-radius: 15px;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        @include desktop {
+            flex: 1;
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+}
+
+.form-group label {
+    font-size: 1.3rem;
+    margin-right: 15px;
+    color: #7f7e7a;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: $primaryBlue;
+    border: 1px solid $primaryNavy;
+    border-radius: 6px;
+    box-sizing: border-box;
+    @include font-style($font-jura);
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
