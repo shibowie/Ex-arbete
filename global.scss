@@ -23,7 +23,6 @@ header {
     z-index: 15000;
 
     @include desktop {
-        justify-content: space-between;
         padding: 10px $padding-desktop-x;
     }
 
